@@ -39,7 +39,7 @@ export default function Science() {
             </strong>
           </blockquote>
           <p className="font-mono" style={{ fontSize: 11, color: "rgba(196,152,60,0.65)", letterSpacing: "0.12em", marginTop: "1.25rem" }}>
-            — Dr. Joe Dispenza
+            Dr. Joe Dispenza
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export default function Science() {
           {[
             {
               label: "Expressão Genética",
-              text: "Você não é prisioneiro do seu passado genético. O que você pensa, como age e o estado que sustenta reescreve a expressão dos seus genes —",
+              text: "Você não é prisioneiro do seu passado genético. O que você pensa, como age e o estado que sustenta reescreve a expressão dos seus genes.",
               highlight: "e a realidade que você manifesta",
               suffix: ".",
             },

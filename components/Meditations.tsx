@@ -1,5 +1,6 @@
 "use client";
 import IphoneMockup from "./IphoneMockup";
+import Image from "next/image";
 
 /* ─── Minigame phone mockup ─────────────────────────────────────── */
 function MinigamePhone({ children }: { children: React.ReactNode }) {
@@ -45,7 +46,7 @@ function MinigamePhone({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ─── Minigame 1 — Criando seu potencial ────────────────────────── */
+/* ─── Minigame 1: Criando seu potencial ────────────────────────── */
 function Minigame1Preview() {
   return (
     <MinigamePhone>
@@ -89,7 +90,7 @@ function Minigame1Preview() {
   );
 }
 
-/* ─── Minigame 2 — Recondicione corpo e mente ───────────────────── */
+/* ─── Minigame 2: Recondicione corpo e mente ───────────────────── */
 function Minigame2Preview() {
   return (
     <MinigamePhone>
@@ -148,7 +149,7 @@ const items: Item[] = [
     type: "minigame",
     tagline: "Exercício interativo · Antes de começar",
     title: "Criando seu potencial",
-    description: "Defina o que você quer manifestar — em palavras suas. Escolha o estado de quem já vive isso. Quando intenção e frequência alinham, você cria uma nova assinatura quântica.",
+    description: "Defina o que você quer manifestar, em palavras suas. Escolha o estado de quem já vive isso. Quando intenção e frequência alinham, você cria uma nova assinatura quântica.",
     visual: <Minigame1Preview />,
   },
   {
@@ -162,7 +163,7 @@ const items: Item[] = [
     visual: (
       <IphoneMockup
         imageSrc="/images/Sintonize.webp"
-        artwork={<img src="/images/Sintonize.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        artwork={<Image src="/images/Sintonize.webp" alt="" fill sizes="220px" style={{ objectFit: "cover" }} />}
         title="SINTONIZE NOVOS POTENCIAIS"
         progressWidth="55%"
       />
@@ -179,7 +180,7 @@ const items: Item[] = [
     visual: (
       <IphoneMockup
         imageSrc="/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp"
-        artwork={<img src="/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        artwork={<Image src="/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp" alt="" fill sizes="220px" style={{ objectFit: "cover" }} />}
         title="BÊNÇÃO DOS CENTROS DE ENERGIA"
         progressWidth="36%"
       />
@@ -197,13 +198,13 @@ const items: Item[] = [
     tagline: "Sessão 3",
     title: "RECONDICIONE CORPO E MENTE",
     duration: "7 min",
-    description: "Ensine seu corpo a viver no futuro — antes de ele acontecer.",
+    description: "Ensine seu corpo a viver no futuro, antes de ele acontecer.",
     imageSrc: "/images/Recondicione.webp",
     progressWidth: "22%",
     visual: (
       <IphoneMockup
         imageSrc="/images/Recondicione.webp"
-        artwork={<img src="/images/Recondicione.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        artwork={<Image src="/images/Recondicione.webp" alt="" fill sizes="220px" style={{ objectFit: "cover" }} />}
         title="RECONDICIONE CORPO E MENTE"
         progressWidth="22%"
       />
@@ -220,7 +221,7 @@ const items: Item[] = [
     visual: (
       <IphoneMockup
         imageSrc="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp"
-        artwork={<img src="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        artwork={<Image src="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp" alt="" fill sizes="220px" style={{ objectFit: "cover" }} />}
         title="MEDITAÇÃO CAMINHANDO"
         progressWidth="68%"
       />
@@ -237,7 +238,7 @@ const items: Item[] = [
     visual: (
       <IphoneMockup
         imageSrc="/images/tempo.webp"
-        artwork={<img src="/images/tempo.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        artwork={<Image src="/images/tempo.webp" alt="" fill sizes="220px" style={{ objectFit: "cover" }} />}
         title="ESPAÇO-TEMPO / TEMPO-ESPAÇO"
         progressWidth="80%"
       />
@@ -265,7 +266,7 @@ export default function Meditations() {
           </h2>
           <div style={{ width: 36, height: 1, margin: "1.75rem auto", background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.40), transparent)" }} />
           <p className="reveal" style={{ fontSize: "clamp(0.9375rem, 1.8vw, 1.05rem)", color: "rgba(210,205,230,0.55)", maxWidth: 520, margin: "0 auto", lineHeight: 1.78, fontFamily: "var(--font-body)" }}>
-            Curtas, progressivas e guiadas — projetadas para mover você de quem você foi para quem você está se tornando.
+            Curtas, progressivas e guiadas, projetadas para mover você de quem você foi para quem você está se tornando.
           </p>
         </div>
 

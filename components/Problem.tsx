@@ -11,7 +11,7 @@ const BG = "#080613";
 
 export default function Problem() {
   return (
-    <section style={{ padding: "7rem 2rem 6rem", background: BG, position: "relative", overflow: "hidden" }}>
+    <section className="problem-section" style={{ padding: "7rem 2rem 6rem", background: BG, position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "60%", height: 1, background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.10), transparent)" }} />
 
       <div style={{ position: "absolute", width: 500, height: 500, borderRadius: "50%", background: "radial-gradient(circle, rgba(90,80,170,0.07) 0%, transparent 70%)", top: "50%", left: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none" }} />
@@ -19,7 +19,7 @@ export default function Problem() {
 
       <div style={{ maxWidth: 860, margin: "0 auto", position: "relative", zIndex: 1 }}>
         {/* Header */}
-        <div className="reveal" style={{ textAlign: "center", marginBottom: "4.5rem" }}>
+        <div className="reveal problem-header" style={{ textAlign: "center", marginBottom: "4.5rem" }}>
           <span className="section-label" style={{ marginBottom: "1.25rem", color: "rgba(148,136,196,0.45)" }}>A Questão</span>
           <h2
             className="font-display"
@@ -51,16 +51,14 @@ export default function Problem() {
 
           <div className="quote-night">
             <blockquote className="font-display">
-              "Quando você pensa os mesmos pensamentos,
-              <br />faz as mesmas escolhas,
-              <br />demonstra os mesmos hábitos…
-              <br /><br />
+              "Quando você pensa os mesmos pensamentos, faz as mesmas escolhas e demonstra os mesmos hábitos...
+              <span className="problem-break"><br /><br /></span>
               <strong style={{ color: "var(--fog)", fontStyle: "normal", fontWeight: 600 }}>
                 Seu passado se torna seu futuro."
               </strong>
             </blockquote>
             <p className="font-mono" style={{ fontSize: 11, color: "rgba(148,136,196,0.55)", letterSpacing: "0.12em", marginTop: "1.25rem" }}>
-              — Dr. Joe Dispenza
+              Dr. Joe Dispenza
             </p>
           </div>
 
@@ -68,6 +66,7 @@ export default function Problem() {
             {bullets.map((item) => (
               <div
                 key={item}
+                className="problem-bullet"
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
@@ -79,7 +78,7 @@ export default function Problem() {
                 }}
               >
                 <span style={{ color: "var(--lavender)", fontSize: "0.5rem", flexShrink: 0, marginTop: 7, display: "inline-block", width: 5, height: 5, borderRadius: "50%", border: "1.5px solid var(--lavender)", opacity: 0.7 }} />
-                <p style={{ fontSize: "0.9375rem", color: "rgba(210,205,230,0.65)", lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
+                <p className="problem-bullet-text" style={{ fontSize: "0.9375rem", color: "rgba(210,205,230,0.65)", lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
                   {item}
                 </p>
               </div>
@@ -88,7 +87,16 @@ export default function Problem() {
         </div>
       </div>
 
-      <style>{`@media (max-width: 640px) { .bullets-grid { grid-template-columns: 1fr !important; } }`}</style>
+      <style>{`
+        @media (max-width: 640px) {
+          .problem-section { padding: 5.75rem 1.25rem 4.75rem !important; }
+          .problem-header { margin-bottom: 3.25rem !important; }
+          .problem-break { display: none; }
+          .bullets-grid { grid-template-columns: 1fr !important; }
+          .problem-bullet { padding: 0.95rem 1rem !important; }
+          .problem-bullet-text { font-size: 0.9375rem !important; }
+        }
+      `}</style>
     </section>
   );
 }

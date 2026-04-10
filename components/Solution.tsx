@@ -11,7 +11,7 @@ const steps = [
     number: "02",
     label: "Frequência",
     title: "Você entra no estado de quem já vive isso.",
-    text: "Não como visualização — como experiência real no corpo, agora.",
+    text: "Não como visualização, como experiência real no corpo, agora.",
   },
   {
     number: "03",
@@ -49,7 +49,7 @@ export default function Solution() {
             }}
           >
             Para manifestar uma nova realidade,
-            <br />você precisa <em>ser</em> — antes de ter.{" "}
+            <br />você precisa <em>ser</em>, antes de ter.{" "}
             <span style={{ color: "var(--lavender)" }}>Intenção</span>{" "}
             +{" "}
             <span style={{ color: "var(--gold)" }}>frequência</span>.

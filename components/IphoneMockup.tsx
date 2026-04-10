@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 interface IphoneMockupProps {
   imageSrc: string;
@@ -46,15 +47,13 @@ export default function IphoneMockup({
             position: "relative",
           }}
         >
-          <img
+          <Image
             src={imageSrc}
             alt=""
             aria-hidden="true"
+            fill
+            sizes="220px"
             style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
               objectFit: "cover",
               filter: "blur(24px) brightness(0.55) saturate(1.4)",
               transform: "scale(1.15)",
@@ -112,7 +111,7 @@ export default function IphoneMockup({
             </div>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
-              <img src="/images/logo-ecotopia.webp" alt="Ecotopia" style={{ height: 48, objectFit: "contain" }} />
+              <Image src="/images/logo-ecotopia.webp" alt="Ecotopia" width={48} height={48} sizes="48px" style={{ objectFit: "contain" }} />
             </div>
 
             <div
@@ -126,6 +125,7 @@ export default function IphoneMockup({
                 marginBottom: 16,
                 fontSize: 48,
                 overflow: "hidden",
+                position: "relative",
               }}
             >
               {artwork}
@@ -149,7 +149,15 @@ export default function IphoneMockup({
                 marginBottom: 12,
               }}
             >
-              <span style={{ fontSize: 16, color: "rgba(255,255,255,0.6)" }}>⏮</span>
+              <span
+                aria-hidden="true"
+                style={{ width: 18, height: 18, display: "inline-flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.7)" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M11 7L5 12L11 17V7Z" fill="currentColor" />
+                  <path d="M19 7L13 12L19 17V7Z" fill="currentColor" />
+                </svg>
+              </span>
               <div
                 style={{
                   width: 40,
@@ -159,13 +167,22 @@ export default function IphoneMockup({
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: 16,
                   color: "white",
                 }}
               >
-                ▶
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 7.5V16.5L16.5 12L9 7.5Z" fill="currentColor" />
+                </svg>
               </div>
-              <span style={{ fontSize: 16, color: "rgba(255,255,255,0.6)" }}>⏭</span>
+              <span
+                aria-hidden="true"
+                style={{ width: 18, height: 18, display: "inline-flex", alignItems: "center", justifyContent: "center", color: "rgba(255,255,255,0.7)" }}
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M13 7L19 12L13 17V7Z" fill="currentColor" />
+                  <path d="M5 7L11 12L5 17V7Z" fill="currentColor" />
+                </svg>
+              </span>
             </div>
 
             <div>

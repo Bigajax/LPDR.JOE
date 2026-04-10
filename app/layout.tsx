@@ -25,7 +25,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Protocolo Ecotopia — Reprogramação mental e emocional em 7 minutos",
+  title: "Protocolo Ecotopia: Reprogramação mental e emocional em 7 minutos",
   description:
     "5 sessões guiadas (7 min/dia) para interromper padrões emocionais, elevar sua frequência e começar a criar a realidade que você projeta. Acesso imediato e vitalício.",
 };

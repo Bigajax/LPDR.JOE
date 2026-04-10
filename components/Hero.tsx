@@ -1,13 +1,16 @@
 "use client";
 import MacbookMockup from "./MacbookMockup";
-import NeuralCanvas from "./NeuralCanvas";
 import CountUp from "./CountUp";
+import dynamic from "next/dynamic";
+
+const NeuralCanvas = dynamic(() => import("./NeuralCanvas"), { ssr: false, loading: () => null });
 
 
 export default function Hero() {
   return (
     <section
       id="hero"
+      className="hero-root"
       style={{
         minHeight: "100vh",
         display: "flex",
@@ -56,10 +59,10 @@ export default function Hero() {
       >
 
         {/* ════ LEFT ════ */}
-        <div>
+        <div className="hero-copy">
 
           {/* Eyebrow: badge único */}
-          <div style={{ marginBottom: "1.75rem" }}>
+          <div className="hero-eyebrow" style={{ marginBottom: "1.75rem" }}>
             <span className="font-mono" style={{
               display: "inline-flex",
               alignItems: "center",
@@ -119,13 +122,13 @@ export default function Hero() {
               fontWeight: 400,
             }}
           >
-            5 sessões guiadas baseadas nos estudos do Dr. Joe Dispenza
-            — para alinhar sua frequência interna com a realidade
+            5 sessões guiadas baseadas nos estudos do Dr. Joe Dispenza,
+            para alinhar sua frequência interna com a realidade
             que você quer manifestar.
           </p>
 
-          {/* ── Benefit pills — premium style ── */}
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2.75rem" }}>
+          {/* ── Benefit pills (premium style) ── */}
+          <div className="hero-pills" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2.75rem" }}>
             {[
               { label: "5 sessões guiadas",    icon: "◈" },
               { label: "7 min por dia",         icon: "◷" },
@@ -180,7 +183,7 @@ export default function Hero() {
                 boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50)",
               }}
             >
-              <span style={{ position: "relative", zIndex: 1 }}>Começar agora — é grátis</span>
+              <span style={{ position: "relative", zIndex: 1 }}>Começar agora (é grátis)</span>
               {/* Shine overlay */}
               <span className="cta-shine" style={{
                 position: "absolute", inset: 0,
@@ -207,18 +210,18 @@ export default function Hero() {
               color: "rgba(192,180,224,0.32)",
               letterSpacing: "0.10em",
             }}>
-              Baseado em "Como se Tornar Sobrenatural" — Dr. Joe Dispenza
+              Baseado em "Como se Tornar Sobrenatural" (Dr. Joe Dispenza)
             </p>
           </div>
         </div>
 
-        {/* ════ RIGHT — Mockup ════ */}
+        {/* ════ RIGHT: Mockup ════ */}
         <div
           className="hero-visual"
           style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}
         >
           {/* Orbital ring */}
-          <div style={{
+          <div className="hero-orbit hero-orbit-1" style={{
             position: "absolute",
             width: "clamp(280px, 38vw, 500px)",
             height: "clamp(280px, 38vw, 500px)",
@@ -238,7 +241,7 @@ export default function Hero() {
               boxShadow: "0 0 8px rgba(192,180,224,0.60)",
             }} />
           </div>
-          <div style={{
+          <div className="hero-orbit hero-orbit-2" style={{
             position: "absolute",
             width: "clamp(200px, 28vw, 380px)",
             height: "clamp(200px, 28vw, 380px)",
@@ -260,7 +263,7 @@ export default function Hero() {
           </div>
 
           {/* Central glow behind mockup */}
-          <div style={{
+          <div className="hero-glow" style={{
             position: "absolute",
             width: "clamp(240px, 32vw, 420px)",
             height: "clamp(240px, 32vw, 420px)",
@@ -273,7 +276,7 @@ export default function Hero() {
           }} />
 
           {/* Mockup */}
-          <div className="float-slow" style={{ position: "relative", zIndex: 2, width: "100%" }}>
+          <div className="float-slow hero-mockup" style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 860, margin: "0 auto" }}>
             <MacbookMockup />
           </div>
 
@@ -310,7 +313,7 @@ export default function Hero() {
               fontSize: 9.5, color: "rgba(192,180,224,0.40)",
               marginTop: 8, letterSpacing: "0.06em",
             }}>
-              — Ana M., 34 anos
+              Ana M., 34 anos
             </p>
           </div>
 
@@ -344,7 +347,7 @@ export default function Hero() {
       </div>
 
       {/* ── Scroll hint ── */}
-      <div style={{
+      <div className="hero-scroll-hint" style={{
         position: "absolute", bottom: 28, left: "50%",
         transform: "translateX(-50%)",
         display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
@@ -386,6 +389,26 @@ export default function Hero() {
           .hero-visual { min-height: 320px; }
           .testimonial-card { left: 50% !important; transform: translateX(-50%); bottom: -20px !important; }
           .stat-card { display: none !important; }
+        }
+        @media (max-width: 600px) {
+          .hero-root { min-height: 100svh !important; padding-top: calc(76px + env(safe-area-inset-top)) !important; padding-bottom: 56px !important; }
+          .hero-copy { text-align: center; }
+          .hero-eyebrow { display: flex; justify-content: center; }
+          .hero-copy p { margin-left: auto !important; margin-right: auto !important; }
+          .hero-pills { justify-content: center; }
+          .hero-cta { width: min(520px, 100%) !important; justify-content: center; }
+          .hero-scroll-hint { display: none !important; }
+          .hero-visual { flex-direction: column !important; }
+          .hero-orbit, .hero-glow { display: none !important; }
+          .hero-mockup { max-width: min(520px, 100%) !important; }
+          .testimonial-card {
+            position: relative !important;
+            left: auto !important;
+            bottom: auto !important;
+            transform: none !important;
+            width: min(360px, 92vw) !important;
+            margin: 14px auto 0 !important;
+          }
         }
       `}</style>
     </section>

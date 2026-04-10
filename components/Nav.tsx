@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const links = [
   { label: "Protocolo", href: "#meditations", id: "meditations" },
@@ -38,10 +39,10 @@ export default function Nav() {
         position: "fixed",
         top: 0, left: 0, right: 0,
         zIndex: 100,
-        background: scrolled ? "rgba(5,3,15,0.92)" : "transparent",
-        backdropFilter: scrolled ? "blur(18px)" : "none",
-        WebkitBackdropFilter: scrolled ? "blur(18px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(148,136,196,0.10)" : "1px solid transparent",
+        background: scrolled ? "rgba(242,235,224,0.96)" : "rgba(242,235,224,0.92)",
+        backdropFilter: "blur(18px)",
+        WebkitBackdropFilter: "blur(18px)",
+        borderBottom: "1px solid rgba(28,20,40,0.10)",
         transition: "background 0.45s ease, border-color 0.45s ease",
       }}
     >
@@ -61,10 +62,14 @@ export default function Nav() {
           aria-label="Voltar para o início"
           style={{ display: "block", lineHeight: 0 }}
         >
-          <img
+          <Image
             src="/images/logo-ecotopia.webp"
             alt="Ecotopia"
-            style={{ width: 46, height: 46, objectFit: "contain", display: "block", filter: "brightness(0) invert(1)", cursor: "pointer" }}
+            width={46}
+            height={46}
+            sizes="46px"
+            preload
+            style={{ objectFit: "contain", display: "block", cursor: "pointer" }}
           />
         </a>
 
@@ -78,7 +83,7 @@ export default function Nav() {
                 className="font-mono nav-link"
                 style={{
                   fontSize: 11.5,
-                  color: isActive ? "rgba(192,180,224,0.90)" : "rgba(235,229,218,0.40)",
+                  color: isActive ? "rgba(28,20,40,0.88)" : "rgba(28,20,40,0.55)",
                   textDecoration: "none",
                   letterSpacing: "0.16em",
                   textTransform: "uppercase",
@@ -95,7 +100,7 @@ export default function Nav() {
                   left: 0,
                   right: 0,
                   height: 1,
-                  background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.70), transparent)",
+                  background: "linear-gradient(90deg, transparent, rgba(124,111,192,0.75), transparent)",
                   transform: isActive ? "scaleX(1)" : "scaleX(0)",
                   transition: "transform 0.35s cubic-bezier(0.16,1,0.3,1)",
                   transformOrigin: "center",
@@ -105,14 +110,18 @@ export default function Nav() {
           })}
         </div>
 
-        <a href="/app/guest" className="btn-cta" style={{ padding: "0.55rem 1.4rem", fontSize: "0.8125rem", minHeight: 38 }}>
+        <a
+          href="/app/guest"
+          className="btn-cta"
+          style={{ padding: "0.55rem 1.2rem", fontSize: "0.8125rem", minHeight: 38, width: "auto", whiteSpace: "nowrap" }}
+        >
           Começar
         </a>
       </div>
 
       <style>{`
         @media (min-width: 768px) { .nav-links { display: flex !important; } }
-        .nav-link:hover { color: rgba(192,180,224,0.80) !important; }
+        .nav-link:hover { color: rgba(28,20,40,0.88) !important; }
       `}</style>
     </nav>
   );

@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Vou sentir diferença quando?",
-    a: "Algumas pessoas já percebem nos primeiros dias — outras ao longo da repetição.",
+    a: "Algumas pessoas já percebem nos primeiros dias. Outras ao longo da repetição.",
   },
 ];
 

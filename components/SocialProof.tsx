@@ -3,7 +3,7 @@ import CountUp from "./CountUp";
 
 const badges = [
   { value: 5,     display: null,    suffix: "",  label: "Sessões",   sub: "guiadas",   isNum: true  },
-  { value: 7,     display: "5–7",   suffix: "",  label: "Minutos",   sub: "por dia",   isNum: false },
+  { value: 7,     display: "5 a 7", suffix: "",  label: "Minutos",   sub: "por dia",   isNum: false },
   { value: null,  display: "✦",     suffix: "",  label: "Protocolo", sub: "testado",   isNum: false },
   { value: null,  display: "∞",     suffix: "",  label: "Acesso",    sub: "vitalício", isNum: false },
 ];
@@ -43,7 +43,7 @@ export default function SocialProof() {
           className="font-display reveal"
           style={{ fontSize: "clamp(0.9rem, 1.8vw, 1rem)", color: "var(--ink-muted)", lineHeight: 1.75, marginBottom: "4rem", fontStyle: "italic" }}
         >
-          — Dr. Joe Dispenza
+          Dr. Joe Dispenza
         </p>
 
         <div className="badge-grid reveal" data-stagger>

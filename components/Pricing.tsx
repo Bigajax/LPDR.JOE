@@ -2,7 +2,7 @@
 
 const features = [
   "5 meditações guiadas",
-  "Sessões curtas (5–7 min)",
+  "Sessões curtas (5 a 7 min)",
   "Acesso imediato",
   "Acesso vitalício",
   "Aplicável no dia a dia",
@@ -141,7 +141,7 @@ export default function Pricing() {
           </div>
 
           <p style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 28 }}>
-            Pagamento único — sem cobrança recorrente
+            Pagamento único, sem cobrança recorrente
           </p>
 
           <div

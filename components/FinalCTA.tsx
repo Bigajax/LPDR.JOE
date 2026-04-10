@@ -5,6 +5,7 @@ const BG = "#05030f";
 export default function FinalCTA() {
   return (
     <section
+      className="finalcta-section"
       style={{
         padding: "8rem 2rem 7rem",
         textAlign: "center",
@@ -26,7 +27,7 @@ export default function FinalCTA() {
 
       <div style={{ maxWidth: 720, margin: "0 auto", position: "relative", zIndex: 1 }}>
         {/* Card */}
-        <div className="card-night reveal" style={{ marginBottom: "5rem", textAlign: "left" }}>
+        <div className="card-night reveal finalcta-card" style={{ marginBottom: "5rem", textAlign: "left" }}>
           <span className="section-label" style={{ marginBottom: "1.75rem" }}>O Que Você Vai Testar</span>
 
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "1.5rem", fontFamily: "var(--font-body)" }}>
@@ -34,16 +35,14 @@ export default function FinalCTA() {
             do estado que sustenta por dentro.
           </p>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "2.5rem", fontFamily: "var(--font-body)" }}>
-            Mude o estado — mude a realidade.
+            Mude o estado. Mude a realidade.
           </p>
 
           <div className="quote-night" style={{ margin: "0 0 2.5rem" }}>
             <blockquote className="font-display">
-              "Você não é prisioneiro de seus genes.
-              <br />A expressão genética é mutável quando você pensa,
-              <br />age e se comporta diferente."
+              "Você não é prisioneiro de seus genes. A expressão genética é mutável quando você pensa, age e se comporta diferente."
             </blockquote>
-            <p className="font-mono" style={{ fontSize: 11, color: "rgba(148,136,196,0.55)", letterSpacing: "0.12em", marginTop: "1.25rem" }}>— Dr. Joe Dispenza</p>
+            <p className="font-mono" style={{ fontSize: 11, color: "rgba(148,136,196,0.55)", letterSpacing: "0.12em", marginTop: "1.25rem" }}>Dr. Joe Dispenza</p>
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -77,6 +76,15 @@ export default function FinalCTA() {
           </a>
         </div>
       </div>
+
+      <style>{`
+        @media (max-width: 640px) {
+          .finalcta-section { padding: 6.25rem 1.25rem 5.25rem !important; }
+          .finalcta-card { margin-bottom: 3.25rem !important; }
+          .finalcta-card .section-label { margin-bottom: 1.25rem !important; text-align: center; }
+          .finalcta-card .quote-night { margin: 0 0 1.5rem !important; }
+        }
+      `}</style>
     </section>
   );
 }

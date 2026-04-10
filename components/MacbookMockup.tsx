@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 
 function AppScreen() {
   return (
@@ -12,7 +13,7 @@ function AppScreen() {
       display: "flex",
       flexDirection: "column",
     }}>
-      {/* ── Nav — white bar like the real app ── */}
+      {/* ── Nav (white bar like the real app) ── */}
       <div style={{
         flexShrink: 0,
         height: 34,
@@ -23,25 +24,35 @@ function AppScreen() {
         gap: 8,
         zIndex: 2,
       }}>
-        <img src="/images/logo-ecotopia.webp" alt="" style={{ width: 18, height: 18, objectFit: "contain" }} />
+        <Image src="/images/logo-ecotopia.webp" alt="" width={18} height={18} sizes="18px" style={{ objectFit: "contain" }} />
         <span style={{ fontSize: 8.5, color: "#1a1a2e", fontFamily: "monospace", fontWeight: 700, letterSpacing: "0.08em" }}>ECOTOPIA</span>
         <div style={{ flex: 1, display: "flex", justifyContent: "center", gap: 18 }}>
-          <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif" }}>🏠 Hoje</span>
-          <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif" }}>🔍 Explorar</span>
+          <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif", display: "inline-flex", alignItems: "center", gap: 5 }}>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 10.5L12 3L21 10.5V21H14V14H10V21H3V10.5Z" fill="currentColor" opacity="0.9" />
+            </svg>
+            Hoje
+          </span>
+          <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif", display: "inline-flex", alignItems: "center", gap: 5 }}>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M10.5 18.5a8 8 0 1 1 5.1-1.9l4.4 4.4-1.4 1.4-4.4-4.4a8 8 0 0 1-3.7.5Zm0-2a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z" fill="currentColor" opacity="0.9" />
+            </svg>
+            Explorar
+          </span>
         </div>
         <div style={{ width: 20, height: 20, borderRadius: "50%", background: "linear-gradient(135deg,#9488C4,#7a6eb4)", flexShrink: 0 }} />
       </div>
 
       {/* ── Hero area ── */}
       <div style={{ flex: 1, position: "relative", overflow: "hidden" }}>
-        {/* Background image — fill height, crown at top */}
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "url('/images/app-hero-bg.webp')",
-          backgroundSize: "auto 115%",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-        }} />
+        {/* Background image (fill height, crown at top) */}
+        <Image
+          src="/images/app-hero-bg.webp"
+          alt=""
+          fill
+          sizes="(max-width: 768px) 100vw, 840px"
+          style={{ objectFit: "cover", objectPosition: "center top", transform: "scale(1.15)" }}
+        />
 
         {/* Overlay */}
         <div style={{
@@ -49,7 +60,7 @@ function AppScreen() {
           background: "linear-gradient(180deg, rgba(5,10,26,0.05) 0%, rgba(5,10,26,0.35) 50%, rgba(5,10,26,0.88) 100%)",
         }} />
 
-        {/* Content — vertically centered */}
+        {/* Content (vertically centered) */}
         <div style={{
           position: "absolute", inset: 0,
           display: "flex", flexDirection: "column",

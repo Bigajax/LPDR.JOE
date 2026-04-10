@@ -69,7 +69,7 @@ export default function Testimonial() {
               opacity: 0.5,
             }}
           />
-          Anna Willems — De cadeira de rodas a uma nova vida, através da
+          Anna Willems: De cadeira de rodas a uma nova vida, através da
           meditação
         </cite>
       </div>

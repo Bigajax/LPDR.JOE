@@ -82,7 +82,7 @@ body::before {
   100% { background-position: -240% center; }
 }
 
-/* ── CTA Button (primary — on dark bg) ── */
+/* ── CTA Button (primary, on dark bg) ── */
 .btn-cta {
   background: linear-gradient(135deg, #9488C4, #7a6eb4);
   color: #FFFFFF;
@@ -194,6 +194,10 @@ body::before {
   box-shadow: 0 8px 40px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06);
 }
 
+@media (max-width: 640px) {
+  .card-night, .card-day { padding: 1.5rem; border-radius: 16px; }
+}
+
 .card-day {
   background: rgba(248, 242, 234, 0.80);
   border: 1px solid rgba(28, 20, 40, 0.08);
@@ -236,6 +240,12 @@ body::before {
   line-height: 1.75;
   font-style: italic;
   color: var(--fog-dim);
+}
+
+@media (max-width: 640px) {
+  .quote-night, .quote-day { padding: 1.25rem 1.25rem; margin: 1.5rem 0; }
+  .quote-night::before, .quote-day::before { font-size: 3.5rem; left: 12px; top: -6px; }
+  .quote-night p, .quote-night blockquote, .quote-day p, .quote-day blockquote { font-size: clamp(1rem, 4.2vw, 1.15rem); line-height: 1.65; }
 }
 
 .quote-day {
