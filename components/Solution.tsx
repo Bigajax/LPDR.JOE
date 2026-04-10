@@ -111,7 +111,7 @@ export default function Solution() {
         </div>
 
         <div style={{ textAlign: "center" }}>
-          <a href="/app/guest" className="btn-cta-ink" style={{ display: "inline-flex" }}>
+          <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta-ink" style={{ display: "inline-flex" }}>
             Iniciar o Protocolo
           </a>
         </div>

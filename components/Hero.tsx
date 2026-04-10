@@ -160,7 +160,9 @@ export default function Hero() {
           {/* ── PRIMARY CTA ── */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "1rem" }} className="cta-group">
             <a
-              href="/app/guest"
+              href="https://ecofrontend888.vercel.app/app/guest/intro-potencial"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hero-cta"
               style={{
                 display: "inline-flex",

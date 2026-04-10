@@ -117,7 +117,9 @@ export default function Nav() {
         </div>
 
         <a
-          href="/app/guest"
+          href="https://ecofrontend888.vercel.app/app/guest/intro-potencial"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-cta"
           style={{ padding: "0.55rem 1.2rem", fontSize: "0.8125rem", minHeight: 40, width: "auto", whiteSpace: "nowrap" }}
         >

@@ -46,7 +46,7 @@ export default function FinalCTA() {
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href="/app/guest" className="btn-cta" style={{ display: "inline-flex" }}>Testar Agora</a>
+            <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ display: "inline-flex" }}>Testar Agora</a>
           </div>
         </div>
 
@@ -71,7 +71,7 @@ export default function FinalCTA() {
             Sem cadastro · Sem compromisso · Menos de 3 minutos
           </p>
 
-          <a href="/app/guest" className="btn-cta" style={{ fontSize: "1rem", display: "inline-flex", padding: "1.1rem 3rem" }}>
+          <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ fontSize: "1rem", display: "inline-flex", padding: "1.1rem 3rem" }}>
             Começar a Criar Minha Realidade
           </a>
         </div>

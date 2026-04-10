@@ -181,7 +181,9 @@ export default function Pricing() {
           </div>
 
           <a
-            href="/app/guest/entrada"
+            href="https://ecofrontend888.vercel.app/app/guest/intro-potencial"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-cta"
             style={{
               width: "100%",
