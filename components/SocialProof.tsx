@@ -15,9 +15,9 @@ export default function SocialProof() {
       <div style={{
         position: "absolute", inset: 0,
         background: `
-          radial-gradient(ellipse 80% 60% at 15% 20%, rgba(192,180,224,0.10) 0%, transparent 60%),
+          radial-gradient(ellipse 80% 60% at 15% 20%, rgba(196,152,60,0.05) 0%, transparent 60%),
           radial-gradient(ellipse 60% 70% at 85% 80%, rgba(196,152,60,0.06) 0%, transparent 55%),
-          linear-gradient(160deg, #f5f0ff 0%, #F2EBE0 40%, #ede8da 100%)
+          linear-gradient(160deg, #F2EBE0 0%, #F2EBE0 40%, #ede8da 100%)
         `,
         pointerEvents: "none",
       }} />
@@ -30,7 +30,7 @@ export default function SocialProof() {
           style={{ fontSize: "clamp(1.75rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.35, marginBottom: "0.75rem", fontStyle: "italic" }}
         >
           "Quando você muda a forma como se apresenta ao mundo,{" "}
-          <span style={{ color: "var(--lavender)", fontStyle: "normal" }}>o mundo começa a responder diferente.</span>"
+          <span style={{ color: "var(--ink)", fontStyle: "normal" }}>o mundo começa a responder diferente.</span>"
         </h2>
 
         <p
