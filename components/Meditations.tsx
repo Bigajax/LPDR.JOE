@@ -157,12 +157,12 @@ const items: Item[] = [
     title: "SINTONIZE NOVOS POTENCIAIS",
     duration: "7 min",
     description: "Entre em contato com as versões do futuro que já existem no campo de possibilidades.",
-    imageSrc: "/images/Sintonize.png",
+    imageSrc: "/images/Sintonize.webp",
     progressWidth: "55%",
     visual: (
       <IphoneMockup
-        imageSrc="/images/Sintonize.png"
-        artwork={<img src="/images/Sintonize.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        imageSrc="/images/Sintonize.webp"
+        artwork={<img src="/images/Sintonize.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
         title="SINTONIZE NOVOS POTENCIAIS"
         progressWidth="55%"
       />
@@ -174,12 +174,12 @@ const items: Item[] = [
     title: "BÊNÇÃO DOS CENTROS DE ENERGIA",
     duration: "7 min",
     description: "Reprograme cada centro de energia para maior saúde e coerência interna.",
-    imageSrc: "/images/Ben%C3%A7%C3%B5es%20dos%20centros.png",
+    imageSrc: "/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp",
     progressWidth: "36%",
     visual: (
       <IphoneMockup
-        imageSrc="/images/Ben%C3%A7%C3%B5es%20dos%20centros.png"
-        artwork={<img src="/images/Ben%C3%A7%C3%B5es%20dos%20centros.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        imageSrc="/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp"
+        artwork={<img src="/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
         title="BÊNÇÃO DOS CENTROS DE ENERGIA"
         progressWidth="36%"
       />
@@ -198,12 +198,12 @@ const items: Item[] = [
     title: "RECONDICIONE CORPO E MENTE",
     duration: "7 min",
     description: "Ensine seu corpo a viver no futuro — antes de ele acontecer.",
-    imageSrc: "/images/Recondicione.png",
+    imageSrc: "/images/Recondicione.webp",
     progressWidth: "22%",
     visual: (
       <IphoneMockup
-        imageSrc="/images/Recondicione.png"
-        artwork={<img src="/images/Recondicione.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        imageSrc="/images/Recondicione.webp"
+        artwork={<img src="/images/Recondicione.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
         title="RECONDICIONE CORPO E MENTE"
         progressWidth="22%"
       />
@@ -215,12 +215,12 @@ const items: Item[] = [
     title: "MEDITAÇÃO CAMINHANDO",
     duration: "5 min",
     description: "Leve a frequência da sua nova realidade para o mundo físico.",
-    imageSrc: "/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.png",
+    imageSrc: "/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp",
     progressWidth: "68%",
     visual: (
       <IphoneMockup
-        imageSrc="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.png"
-        artwork={<img src="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        imageSrc="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp"
+        artwork={<img src="/images/Medita%C3%A7%C3%A3o%20ao%20Amanhecer.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
         title="MEDITAÇÃO CAMINHANDO"
         progressWidth="68%"
       />
@@ -232,12 +232,12 @@ const items: Item[] = [
     title: "ESPAÇO-TEMPO / TEMPO-ESPAÇO",
     duration: "5 min",
     description: "Acesse o campo quântico onde sua nova realidade já existe.",
-    imageSrc: "/images/tempo.png",
+    imageSrc: "/images/tempo.webp",
     progressWidth: "80%",
     visual: (
       <IphoneMockup
-        imageSrc="/images/tempo.png"
-        artwork={<img src="/images/tempo.png" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
+        imageSrc="/images/tempo.webp"
+        artwork={<img src="/images/tempo.webp" alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: 16 }} />}
         title="ESPAÇO-TEMPO / TEMPO-ESPAÇO"
         progressWidth="80%"
       />

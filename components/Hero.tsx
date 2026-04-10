@@ -7,6 +7,7 @@ import CountUp from "./CountUp";
 export default function Hero() {
   return (
     <section
+      id="hero"
       style={{
         minHeight: "100vh",
         display: "flex",

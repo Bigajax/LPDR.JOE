@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer style={{ background: "#080613", borderTop: "1px solid rgba(148,136,196,0.08)", padding: "52px 24px 40px" }}>
       <div style={{ maxWidth: 860, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 24, textAlign: "center" }}>
-        <img src="/images/logo-ecotopia.png" alt="Ecotopia" style={{ width: 42, height: 42, objectFit: "contain", opacity: 0.75, display: "block", filter: "brightness(0) invert(1)" }} />
+        <img src="/images/logo-ecotopia.webp" alt="Ecotopia" style={{ width: 42, height: 42, objectFit: "contain", opacity: 0.75, display: "block", filter: "brightness(0) invert(1)" }} />
 
         <p className="font-display" style={{ fontSize: 13.5, color: "var(--fog-muted)", lineHeight: 1.65, fontStyle: "italic" }}>
           Baseado nos princípios de{" "}

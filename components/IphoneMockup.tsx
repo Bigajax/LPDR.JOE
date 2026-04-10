@@ -112,7 +112,7 @@ export default function IphoneMockup({
             </div>
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
-              <img src="/images/logo-ecotopia.png" alt="Ecotopia" style={{ height: 48, objectFit: "contain" }} />
+              <img src="/images/logo-ecotopia.webp" alt="Ecotopia" style={{ height: 48, objectFit: "contain" }} />
             </div>
 
             <div

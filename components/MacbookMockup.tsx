@@ -23,7 +23,7 @@ function AppScreen() {
         gap: 8,
         zIndex: 2,
       }}>
-        <img src="/images/logo-ecotopia.png" alt="" style={{ width: 18, height: 18, objectFit: "contain" }} />
+        <img src="/images/logo-ecotopia.webp" alt="" style={{ width: 18, height: 18, objectFit: "contain" }} />
         <span style={{ fontSize: 8.5, color: "#1a1a2e", fontFamily: "monospace", fontWeight: 700, letterSpacing: "0.08em" }}>ECOTOPIA</span>
         <div style={{ flex: 1, display: "flex", justifyContent: "center", gap: 18 }}>
           <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif" }}>🏠 Hoje</span>
@@ -37,7 +37,7 @@ function AppScreen() {
         {/* Background image — fill height, crown at top */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url('/images/app-hero-bg.png')",
+          backgroundImage: "url('/images/app-hero-bg.webp')",
           backgroundSize: "auto 115%",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",

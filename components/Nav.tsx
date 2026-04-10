@@ -56,11 +56,17 @@ export default function Nav() {
           justifyContent: "space-between",
         }}
       >
-        <img
-          src="/images/logo-ecotopia.png"
-          alt="Ecotopia"
-          style={{ width: 46, height: 46, objectFit: "contain", display: "block", filter: "brightness(0) invert(1)" }}
-        />
+        <a
+          href="#hero"
+          aria-label="Voltar para o início"
+          style={{ display: "block", lineHeight: 0 }}
+        >
+          <img
+            src="/images/logo-ecotopia.webp"
+            alt="Ecotopia"
+            style={{ width: 46, height: 46, objectFit: "contain", display: "block", filter: "brightness(0) invert(1)", cursor: "pointer" }}
+          />
+        </a>
 
         <div className="nav-links" style={{ gap: 36, display: "none", alignItems: "center" }}>
           {links.map((link) => {
