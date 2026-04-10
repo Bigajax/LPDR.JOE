@@ -2,22 +2,22 @@
 
 const steps = [
   {
-    number: "01",
+    number: "1",
     label: "Intenção",
-    title: "Você define o que quer manifestar.",
-    text: "Com precisão. Em palavras suas. Específica o suficiente para ser real.",
+    title: "Você define com clareza o que quer criar",
+    text: "",
   },
   {
-    number: "02",
+    number: "2",
     label: "Frequência",
-    title: "Você entra no estado de quem já vive isso.",
-    text: "Não como visualização, como experiência real no corpo, agora.",
+    title: "Aprende a gerar o estado emocional correspondente",
+    text: "",
   },
   {
-    number: "03",
+    number: "3",
     label: "Materialização",
-    title: "Sua realidade começa a responder.",
-    text: "Quando você sustenta esse estado, o externo começa a alinhar com o interno.",
+    title: "Treina esse estado até ele se tornar natural",
+    text: "",
   },
 ];
 
@@ -48,11 +48,14 @@ export default function Solution() {
               margin: "0 auto",
             }}
           >
-            Para manifestar uma nova realidade,
-            <br />você precisa <em>ser</em>, antes de ter.{" "}
-            <span style={{ color: "var(--ink)" }}>Intenção</span>{" "}
+            Para mudar sua realidade, não basta pensar diferente.
+            <br />Você precisa <em>sentir</em> diferente.
+            <br />Quando{" "}
+            <span style={{ color: "var(--ink)" }}>intenção</span>{" "}
             +{" "}
-            <span style={{ color: "var(--gold)" }}>frequência</span>.
+            <span style={{ color: "var(--gold)" }}>emoção</span>{" "}
+            entram em coerência,
+            <br />seu sistema começa a responder de outro jeito.
           </h2>
         </div>
 

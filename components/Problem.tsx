@@ -39,9 +39,15 @@ export default function Problem() {
           </h2>
           <div style={{ width: 36, height: 1, margin: "1.75rem auto", background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.40), transparent)" }} />
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.55)", lineHeight: 1.78, maxWidth: 480, margin: "0 auto", fontFamily: "var(--font-body)" }}>
-            Você não muda sua realidade tentando.
+            Você pensa no futuro.
             <br />
-            Você muda quando para de manifestar o passado.
+            Mas continua sentindo o passado.
+            <br />
+            E nada muda.
+            <br /><br />
+            Você até tenta fazer diferente…
+            <br />
+            Mas seu corpo continua respondendo do mesmo jeito.
           </p>
         </div>
 

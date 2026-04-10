@@ -87,16 +87,18 @@ export default function Hero() {
           <h1
             className="font-display"
             style={{
-              fontSize: "clamp(2.8rem, 5.8vw, 5.1rem)",
+              fontSize: "clamp(36px, 5vw, 64px)",
               fontWeight: 700,
-              lineHeight: 1.05,
+              lineHeight: 1.1,
               letterSpacing: "-0.025em",
               color: "#f5f0ff",
-              marginBottom: "1.625rem",
+              maxWidth: 700,
+              marginBottom: 24,
             }}
           >
-            7 minutos por dia
-            <br />para começar a{" "}
+            Você não precisa repetir o passado.
+            <br />
+            Treine um{" "}
             <span style={{
               background: "linear-gradient(120deg, #a89de0 0%, #d4caff 38%, #ffffff 52%, #d4caff 68%, #a89de0 100%)",
               backgroundSize: "220% auto",
@@ -105,9 +107,9 @@ export default function Hero() {
               backgroundClip: "text",
               animation: "hero-shine 6s linear infinite",
             }}>
-              criar
+              novo estado
             </span>
-            <br />a realidade que você projeta.
+            {" "}em poucos minutos.
           </h1>
 
           {/* ── SUBHEADLINE ── */}
@@ -117,45 +119,14 @@ export default function Hero() {
               color: "rgba(210,205,230,0.72)",
               lineHeight: 1.82,
               maxWidth: 450,
-              marginBottom: "2.25rem",
+              marginBottom: "1.25rem",
               fontFamily: "var(--font-body)",
               fontWeight: 400,
             }}
           >
-            5 sessões guiadas baseadas nos estudos do Dr. Joe Dispenza,
-            para alinhar sua frequência interna com a realidade
-            que você quer manifestar.
+            Uma experiência guiada para sair do automático
+            e começar a mudar o que você sente — e o que você atrai.
           </p>
-
-          {/* ── Benefit pills (premium style) ── */}
-          <div className="hero-pills" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginBottom: "2.75rem" }}>
-            {[
-              { label: "5 sessões guiadas",    icon: "◈" },
-              { label: "7 min por dia",         icon: "◷" },
-              { label: "Acesso imediato",       icon: "⟡" },
-            ].map(({ label, icon }) => (
-              <span
-                key={label}
-                className="font-mono"
-                style={{
-                  fontSize: "0.6875rem",
-                  letterSpacing: "0.12em",
-                  textTransform: "uppercase",
-                  color: "rgba(192,180,224,0.80)",
-                  background: "rgba(148,136,196,0.07)",
-                  border: "1px solid rgba(148,136,196,0.22)",
-                  borderRadius: 6,
-                  padding: "6px 14px",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                }}
-              >
-                <span style={{ color: "var(--lavender)", opacity: 0.85 }}>{icon}</span>
-                {label}
-              </span>
-            ))}
-          </div>
 
           {/* ── PRIMARY CTA ── */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "1rem" }} className="cta-group">
@@ -185,7 +156,7 @@ export default function Hero() {
                 boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50)",
               }}
             >
-              <span style={{ position: "relative", zIndex: 1 }}>Começar agora (é grátis)</span>
+              <span style={{ position: "relative", zIndex: 1 }}>Começar experiência gratuita</span>
               {/* Shine overlay */}
               <span className="cta-shine" style={{
                 position: "absolute", inset: 0,
@@ -200,8 +171,38 @@ export default function Hero() {
               color: "rgba(192,180,224,0.38)",
               letterSpacing: "0.12em",
             }}>
-              Sem cartão · Sem cadastro · Acesso vitalício
+              Sem cadastro · leva menos de 2 minutos
             </p>
+          </div>
+
+          {/* ── Benefit pills (premium style) ── */}
+          <div className="hero-pills" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "2rem", marginBottom: "2.75rem" }}>
+            {[
+              { label: "5 sessões guiadas",    icon: "◈" },
+              { label: "7 min por dia",         icon: "◷" },
+              { label: "Acesso imediato",       icon: "⟡" },
+            ].map(({ label, icon }) => (
+              <span
+                key={label}
+                className="font-mono"
+                style={{
+                  fontSize: "0.6875rem",
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "rgba(192,180,224,0.80)",
+                  background: "rgba(148,136,196,0.07)",
+                  border: "1px solid rgba(148,136,196,0.22)",
+                  borderRadius: 6,
+                  padding: "6px 14px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 6,
+                }}
+              >
+                <span style={{ color: "var(--lavender)", opacity: 0.85 }}>{icon}</span>
+                {label}
+              </span>
+            ))}
           </div>
 
           {/* ── Trust line ── */}

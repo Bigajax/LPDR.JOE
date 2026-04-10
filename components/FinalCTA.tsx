@@ -31,11 +31,12 @@ export default function FinalCTA() {
           <span className="section-label" style={{ marginBottom: "1.75rem" }}>O Que Você Vai Testar</span>
 
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "1.5rem", fontFamily: "var(--font-body)" }}>
-            O que você manifesta para fora é um reflexo direto
-            do estado que sustenta por dentro.
+            Você não precisa entender tudo agora.
+            <br /><br />
+            Você só precisa sentir.
           </p>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "2.5rem", fontFamily: "var(--font-body)" }}>
-            Mude o estado. Mude a realidade.
+            Em poucos minutos, você vai perceber a diferença.
           </p>
 
           <div className="quote-night" style={{ margin: "0 0 2.5rem" }}>
@@ -46,7 +47,7 @@ export default function FinalCTA() {
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ display: "inline-flex" }}>Testar Agora</a>
+            <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ display: "inline-flex" }}>Testar agora</a>
           </div>
         </div>
 
@@ -62,9 +63,9 @@ export default function FinalCTA() {
             className="font-display"
             style={{ fontSize: "clamp(2.25rem, 6vw, 3.75rem)", fontWeight: 700, color: "rgba(235,229,218,0.92)", lineHeight: 1.15, marginBottom: "1.25rem", marginTop: "1.5rem" }}
           >
-            "Se Anna mudou sua realidade,
+            Você já está fazendo isso todos os dias.
             <br />
-            <span className="shimmer-text">você também pode."</span>
+            <span className="shimmer-text">A diferença é que agora você vai fazer com intenção.</span>
           </h2>
 
           <p className="font-mono" style={{ fontSize: "0.6875rem", color: "rgba(192,180,224,0.28)", lineHeight: 1.65, marginBottom: "3rem", letterSpacing: "0.16em" }}>
@@ -72,7 +73,7 @@ export default function FinalCTA() {
           </p>
 
           <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ fontSize: "1rem", display: "inline-flex", padding: "1.1rem 3rem" }}>
-            Começar a Criar Minha Realidade
+            Começar experiência
           </a>
         </div>
       </div>
