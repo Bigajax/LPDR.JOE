@@ -110,8 +110,26 @@ export default function IphoneMockup({
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 16 }}>
-              <Image src="/images/logo-ecotopia.webp" alt="Ecotopia" width={48} height={48} sizes="48px" style={{ objectFit: "contain" }} />
+            {/* Mini white nav bar (improves logo contrast on colorful covers) */}
+            <div style={{ display: "flex", justifyContent: "center", marginBottom: 14 }}>
+              <div
+                style={{
+                  background: "rgba(255,255,255,0.94)",
+                  border: "1px solid rgba(0,0,0,0.08)",
+                  borderRadius: 14,
+                  padding: "8px 12px",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: 8,
+                  boxShadow: "0 14px 34px rgba(0,0,0,0.28)",
+                }}
+              >
+                <Image src="/images/logo-ecotopia.webp" alt="" aria-hidden="true" width={20} height={20} sizes="20px" style={{ objectFit: "contain" }} />
+                <span style={{ fontSize: 10, color: "rgba(20,15,38,0.92)", fontFamily: "monospace", fontWeight: 800, letterSpacing: "0.14em" }}>
+                  ECOTOPIA
+                </span>
+              </div>
             </div>
 
             <div
