@@ -35,26 +35,32 @@ export default function Nav() {
 
   return (
     <nav
+      className="site-nav"
       style={{
         position: "fixed",
         top: 0, left: 0, right: 0,
         zIndex: 100,
-        background: scrolled ? "rgba(242,235,224,0.96)" : "rgba(242,235,224,0.92)",
-        backdropFilter: "blur(18px)",
-        WebkitBackdropFilter: "blur(18px)",
-        borderBottom: "1px solid rgba(28,20,40,0.10)",
-        transition: "background 0.45s ease, border-color 0.45s ease",
+        padding: "14px 18px",
+        background: "transparent",
       }}
     >
       <div
+        className="site-nav-inner"
         style={{
           maxWidth: 1200,
           margin: "0 auto",
-          padding: "0 2rem",
-          height: 68,
+          padding: "0 1.25rem",
+          height: 64,
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          background: scrolled ? "rgba(242,235,224,0.92)" : "rgba(242,235,224,0.72)",
+          backdropFilter: "blur(18px)",
+          WebkitBackdropFilter: "blur(18px)",
+          border: "1px solid rgba(28,20,40,0.10)",
+          borderRadius: 999,
+          boxShadow: scrolled ? "0 14px 44px rgba(0,0,0,0.20)" : "0 10px 34px rgba(0,0,0,0.14)",
+          transition: "background 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease",
         }}
       >
         <a
@@ -113,7 +119,7 @@ export default function Nav() {
         <a
           href="/app/guest"
           className="btn-cta"
-          style={{ padding: "0.55rem 1.2rem", fontSize: "0.8125rem", minHeight: 38, width: "auto", whiteSpace: "nowrap" }}
+          style={{ padding: "0.55rem 1.2rem", fontSize: "0.8125rem", minHeight: 40, width: "auto", whiteSpace: "nowrap" }}
         >
           Começar
         </a>
@@ -122,6 +128,10 @@ export default function Nav() {
       <style>{`
         @media (min-width: 768px) { .nav-links { display: flex !important; } }
         .nav-link:hover { color: rgba(28,20,40,0.88) !important; }
+        @media (max-width: 600px) {
+          .site-nav { padding: calc(10px + env(safe-area-inset-top)) 12px 10px !important; }
+          .site-nav-inner { height: 56px !important; padding: 0 14px !important; }
+        }
       `}</style>
     </nav>
   );
