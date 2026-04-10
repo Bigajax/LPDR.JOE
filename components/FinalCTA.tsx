@@ -7,7 +7,7 @@ export default function FinalCTA() {
     <section
       className="finalcta-section"
       style={{
-        padding: "8rem 2rem 7rem",
+        padding: "clamp(5.5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 2rem) clamp(5rem, 8vw, 7rem)",
         textAlign: "center",
         position: "relative",
         overflow: "hidden",

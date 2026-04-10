@@ -39,6 +39,10 @@ body {
   overflow-x: hidden;
 }
 
+img, svg, video, canvas {
+  max-width: 100%;
+}
+
 /* Grain overlay */
 body::before {
   content: '';
@@ -340,6 +344,16 @@ body::before {
 
 @media (max-width: 768px) {
   .steps-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .badge-grid { gap: 0.9rem; }
+  .badge-grid > div { padding: 1.25rem 1rem !important; border-radius: 14px !important; }
+
+  .steps-grid { gap: 1.1rem; }
+  .steps-grid > div { padding: 1.5rem !important; }
+
+  footer { padding: 40px 18px 32px !important; }
 }
 
 /* ── Misc ── */

@@ -23,7 +23,7 @@ const steps = [
 
 export default function Solution() {
   return (
-    <section style={{ padding: "7rem 2rem 6rem", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
       {/* Gradient mesh */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
@@ -35,7 +35,7 @@ export default function Solution() {
       }} />
 
       <div style={{ maxWidth: 1060, margin: "0 auto", position: "relative", zIndex: 2 }}>
-        <div style={{ textAlign: "center", marginBottom: "5rem" }}>
+        <div style={{ textAlign: "center", marginBottom: "clamp(2.75rem, 6vw, 5rem)" }}>
           <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Como Funciona</span>
           <h2
             className="font-display reveal"
@@ -59,7 +59,7 @@ export default function Solution() {
           </h2>
         </div>
 
-        <div className="steps-grid" style={{ marginBottom: "4rem", position: "relative" }} data-stagger>
+        <div className="steps-grid" style={{ marginBottom: "clamp(2.5rem, 6vw, 4rem)", position: "relative" }} data-stagger>
           {/* Connector */}
           <div className="steps-connector" style={{
             position: "absolute",

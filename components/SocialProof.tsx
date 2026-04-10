@@ -10,7 +10,7 @@ const badges = [
 
 export default function SocialProof() {
   return (
-    <section style={{ padding: "7rem 2rem 6rem", position: "relative", overflow: "hidden" }}>
+    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
       {/* Gradient mesh background */}
       <div style={{
         position: "absolute", inset: 0,
@@ -41,7 +41,7 @@ export default function SocialProof() {
         </p>
         <p
           className="font-display reveal"
-          style={{ fontSize: "clamp(0.9rem, 1.8vw, 1rem)", color: "var(--ink-muted)", lineHeight: 1.75, marginBottom: "4rem", fontStyle: "italic" }}
+          style={{ fontSize: "clamp(0.9rem, 1.8vw, 1rem)", color: "var(--ink-muted)", lineHeight: 1.75, marginBottom: "clamp(2.5rem, 6vw, 4rem)", fontStyle: "italic" }}
         >
           Dr. Joe Dispenza
         </p>

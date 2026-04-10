@@ -251,7 +251,7 @@ const BG = "#080613";
 /* ─── Component ──────────────────────────────────────────────────── */
 export default function Meditations() {
   return (
-    <section id="meditations" style={{ padding: "7rem 2rem 6rem", background: BG, position: "relative", overflow: "hidden" }}>
+    <section id="meditations" style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", background: BG, position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "60%", height: 1, background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.10), transparent)" }} />
 
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(100,80,180,0.07) 0%, transparent 70%)", top: "30%", left: "50%", transform: "translateX(-50%)", pointerEvents: "none" }} />
@@ -271,7 +271,7 @@ export default function Meditations() {
         </div>
 
         {/* Items */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "5.5rem" }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2.75rem, 7vw, 5.5rem)" }}>
           {items.map((item, idx) => {
             const isLeft = idx % 2 === 0;
             const isMinigame = item.type === "minigame";
@@ -284,7 +284,7 @@ export default function Meditations() {
                   display: "flex",
                   flexDirection: isLeft ? "row" : "row-reverse",
                   alignItems: "center",
-                  gap: "4.5rem",
+                  gap: "clamp(2.25rem, 6vw, 4.5rem)",
                 }}
               >
                 {/* Visual */}

@@ -2,7 +2,7 @@
 
 export default function Science() {
   return (
-    <section id="ciencia" style={{ padding: "7rem 2rem 6rem", position: "relative", overflow: "hidden" }}>
+    <section id="ciencia" style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
       {/* Gradient mesh */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
@@ -14,7 +14,7 @@ export default function Science() {
       }} />
 
       <div style={{ maxWidth: 1000, margin: "0 auto", position: "relative", zIndex: 2 }}>
-        <div style={{ textAlign: "center", marginBottom: "4.5rem" }}>
+        <div style={{ textAlign: "center", marginBottom: "clamp(2.75rem, 6vw, 4.5rem)" }}>
           <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Ciência + Prática</span>
           <h2
             className="font-display reveal"

@@ -387,7 +387,7 @@ export default function Hero() {
         }
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
-          .hero-grid h1 { font-size: clamp(2.4rem,8vw,3.5rem) !important; }
+          .hero-grid h1 { font-size: clamp(34px, 7.5vw, 52px) !important; line-height: 1.12 !important; }
           .cta-group { align-items: center !important; }
           .hero-visual { min-height: 320px; }
           .testimonial-card { left: 50% !important; transform: translateX(-50%); bottom: -20px !important; }
@@ -398,8 +398,10 @@ export default function Hero() {
           .hero-copy { text-align: center; }
           .hero-eyebrow { display: flex; justify-content: center; }
           .hero-copy p { margin-left: auto !important; margin-right: auto !important; }
+          .hero-grid h1 { font-size: clamp(32px, 9vw, 44px) !important; line-height: 1.12 !important; margin-bottom: 20px !important; }
+          .cta-group { gap: 0.75rem !important; }
           .hero-pills { justify-content: center; }
-          .hero-cta { width: min(520px, 100%) !important; justify-content: center; }
+          .hero-cta { width: min(520px, 100%) !important; justify-content: center; padding: 1.05rem 2.25rem !important; }
           .hero-scroll-hint { display: none !important; }
           .hero-visual { flex-direction: column !important; }
           .hero-orbit, .hero-glow { display: none !important; }
