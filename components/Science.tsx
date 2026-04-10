@@ -7,9 +7,9 @@ export default function Science() {
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
         background: `
-          radial-gradient(ellipse 60% 50% at 20% 30%, rgba(148,136,196,0.09) 0%, transparent 55%),
+          radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196,152,60,0.05) 0%, transparent 55%),
           radial-gradient(ellipse 50% 60% at 85% 75%, rgba(196,152,60,0.05) 0%, transparent 50%),
-          linear-gradient(145deg, #ede8f2 0%, #F2EBE0 45%, #f5efe3 100%)
+          linear-gradient(145deg, #F2EBE0 0%, #F2EBE0 45%, #f5efe3 100%)
         `,
       }} />
 
@@ -21,10 +21,10 @@ export default function Science() {
             style={{ fontSize: "clamp(1.75rem, 4.5vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.35, fontStyle: "italic" }}
           >
             "O Dr. Joe Dispenza combina{" "}
-            <span style={{ color: "var(--lavender)", fontStyle: "normal" }}>neurociência</span>,{" "}
-            <span style={{ color: "var(--lavender)", fontStyle: "normal" }}>epigenética</span>
+            <span style={{ color: "var(--gold)", fontStyle: "normal" }}>neurociência</span>,{" "}
+            <span style={{ color: "var(--gold)", fontStyle: "normal" }}>epigenética</span>
             <br />e{" "}
-            <span style={{ color: "var(--lavender)", fontStyle: "normal" }}>física quântica</span>{" "}
+            <span style={{ color: "var(--gold)", fontStyle: "normal" }}>física quântica</span>{" "}
             com práticas ancestrais."
           </h2>
         </div>
@@ -59,7 +59,7 @@ export default function Science() {
             },
           ].map((card) => (
             <div key={card.label} className="card-day reveal" style={{ position: "relative", overflow: "hidden" }}>
-              <div style={{ position: "absolute", top: 0, right: 0, width: 80, height: 80, background: "radial-gradient(circle at top right, rgba(148,136,196,0.08), transparent 70%)", borderRadius: "0 20px 0 0", pointerEvents: "none" }} />
+              <div style={{ position: "absolute", top: 0, right: 0, width: 80, height: 80, background: "radial-gradient(circle at top right, rgba(196,152,60,0.06), transparent 70%)", borderRadius: "0 20px 0 0", pointerEvents: "none" }} />
               <span className="section-label-ink" style={{ marginBottom: "1.25rem" }}>{card.label}</span>
               <p style={{ fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)", color: "var(--ink-dim)", lineHeight: 1.78, fontFamily: "var(--font-body)" }}>
                 {card.text}{" "}
