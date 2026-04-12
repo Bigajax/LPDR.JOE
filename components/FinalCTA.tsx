@@ -28,15 +28,13 @@ export default function FinalCTA() {
       <div style={{ maxWidth: 720, margin: "0 auto", position: "relative", zIndex: 1 }}>
         {/* Card */}
         <div className="card-night reveal finalcta-card" style={{ marginBottom: "5rem", textAlign: "left" }}>
-          <span className="section-label" style={{ marginBottom: "1.75rem" }}>O Que Você Vai Testar</span>
+          <span className="section-label" style={{ marginBottom: "1.75rem" }}>Você Já Manifesta</span>
 
-          <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "1.5rem", fontFamily: "var(--font-body)" }}>
-            Você não precisa entender tudo agora.
-            <br /><br />
-            Você só precisa sentir.
+          <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, marginBottom: "1.5rem", fontFamily: "var(--font-body)", fontWeight: 500 }}>
+            Todo dia, seus pensamentos, emoções e hábitos estão criando a sua realidade — mesmo quando você não gosta dela.
           </p>
-          <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.60)", lineHeight: 1.82, marginBottom: "2.5rem", fontFamily: "var(--font-body)" }}>
-            Em poucos minutos, você vai perceber a diferença.
+          <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, marginBottom: "2.5rem", fontFamily: "var(--font-body)", fontWeight: 500 }}>
+            Aqui você aprende a usar esse mesmo mecanismo para manifestar o que realmente quer.
           </p>
 
           <div className="quote-night" style={{ margin: "0 0 2.5rem" }}>
@@ -44,6 +42,24 @@ export default function FinalCTA() {
               "Você não é prisioneiro de seus genes. A expressão genética é mutável quando você pensa, age e se comporta diferente."
             </blockquote>
             <p className="font-mono" style={{ fontSize: 11, color: "rgba(148,136,196,0.55)", letterSpacing: "0.12em", marginTop: "1.25rem" }}>Dr. Joe Dispenza</p>
+          </div>
+
+          {/* FAQ mini-block */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "0.625rem", marginBottom: "2rem" }}>
+            {[
+              { q: "Quanto tempo leva?", a: "Menos de 3 minutos para começar" },
+              { q: "Preciso pagar agora?", a: "Não, a experiência inicial é gratuita" },
+              { q: "Funciona para mim?", a: "Se você quer mudar algo na sua vida, sim" },
+            ].map(({ q, a }) => (
+              <div key={q} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start", padding: "0.75rem 1rem", background: "rgba(148,136,196,0.04)", border: "1px solid rgba(148,136,196,0.09)", borderRadius: 10 }}>
+                <span style={{ fontSize: "0.75rem", color: "rgba(196,152,60,0.70)", fontFamily: "var(--font-mono)", letterSpacing: "0.08em", flexShrink: 0, marginTop: 2 }}>→</span>
+                <p style={{ fontSize: "0.875rem", color: "rgba(210,205,230,0.60)", fontFamily: "var(--font-body)", lineHeight: 1.55 }}>
+                  <strong style={{ color: "rgba(235,229,218,0.80)", fontWeight: 600 }}>{q}</strong>{" "}
+                  <span style={{ color: "rgba(192,180,224,0.50)" }}>—</span>{" "}
+                  {a}
+                </p>
+              </div>
+            ))}
           </div>
 
           <div style={{ display: "flex", justifyContent: "center" }}>
@@ -63,17 +79,17 @@ export default function FinalCTA() {
             className="font-display"
             style={{ fontSize: "clamp(2.25rem, 6vw, 3.75rem)", fontWeight: 700, color: "rgba(235,229,218,0.92)", lineHeight: 1.15, marginBottom: "1.25rem", marginTop: "1.5rem" }}
           >
-            Você já está fazendo isso todos os dias.
+            Você já manifesta o tempo todo.
             <br />
-            <span className="shimmer-text">A diferença é que agora você vai fazer com intenção.</span>
+            <span className="shimmer-text">A diferença é se faz isso no automático ou com intenção.</span>
           </h2>
 
-          <p className="font-mono" style={{ fontSize: "0.6875rem", color: "rgba(192,180,224,0.28)", lineHeight: 1.65, marginBottom: "3rem", letterSpacing: "0.16em" }}>
+          <p className="font-mono" style={{ fontSize: "0.6875rem", color: "rgba(192,180,224,0.62)", lineHeight: 1.65, marginBottom: "3rem", letterSpacing: "0.16em" }}>
             Sem cadastro · Sem compromisso · Menos de 3 minutos
           </p>
 
           <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ fontSize: "1rem", display: "inline-flex", padding: "1.1rem 3rem" }}>
-            Começar experiência
+            Testar agora — 3 minutos para experimentar o estado de quem já está vivendo o impossível
           </a>
         </div>
       </div>

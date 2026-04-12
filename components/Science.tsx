@@ -2,14 +2,13 @@
 
 export default function Science() {
   return (
-    <section id="ciencia" style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
-      {/* Gradient mesh */}
+    <section id="ciencia" style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden", background: "#F2EBE0" }}>
+      {/* Gradient mesh — radial overlays only; linear removed so edges stay flat #F2EBE0 */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
         background: `
           radial-gradient(ellipse 60% 50% at 20% 30%, rgba(196,152,60,0.05) 0%, transparent 55%),
-          radial-gradient(ellipse 50% 60% at 85% 75%, rgba(196,152,60,0.05) 0%, transparent 50%),
-          linear-gradient(145deg, #F2EBE0 0%, #F2EBE0 45%, #f5efe3 100%)
+          radial-gradient(ellipse 50% 60% at 85% 75%, rgba(196,152,60,0.05) 0%, transparent 50%)
         `,
       }} />
 
@@ -47,7 +46,7 @@ export default function Science() {
           {[
             {
               label: "Expressão Genética",
-              text: "Você não é prisioneiro do seu passado genético. O que você pensa, como age e o estado que sustenta reescreve a expressão dos seus genes.",
+              text: "Você não é prisioneiro do seu passado genético ou emocional. O que você pensa e sente hoje — o estado que você sustenta — reprograma seus padrões",
               highlight: "e a realidade que você manifesta",
               suffix: ".",
             },
@@ -61,7 +60,7 @@ export default function Science() {
             <div key={card.label} className="card-day reveal" style={{ position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", top: 0, right: 0, width: 80, height: 80, background: "radial-gradient(circle at top right, rgba(196,152,60,0.06), transparent 70%)", borderRadius: "0 20px 0 0", pointerEvents: "none" }} />
               <span className="section-label-ink" style={{ marginBottom: "1.25rem" }}>{card.label}</span>
-              <p style={{ fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)", color: "var(--ink-dim)", lineHeight: 1.78, fontFamily: "var(--font-body)" }}>
+              <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "var(--ink-dim)", lineHeight: 1.72, fontFamily: "var(--font-body)", fontWeight: 500 }}>
                 {card.text}{" "}
                 <strong style={{ color: "var(--ink)", fontWeight: 600 }}>{card.highlight}</strong>
                 {card.suffix}

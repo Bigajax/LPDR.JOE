@@ -20,7 +20,6 @@ export default function Problem() {
       <div style={{ maxWidth: 860, margin: "0 auto", position: "relative", zIndex: 1 }}>
         {/* Header */}
         <div className="reveal problem-header" style={{ textAlign: "center", marginBottom: "4.5rem" }}>
-          <span className="section-label" style={{ marginBottom: "1.25rem", color: "rgba(148,136,196,0.45)" }}>A Questão</span>
           <h2
             className="font-display"
             style={{
@@ -32,29 +31,21 @@ export default function Problem() {
               fontStyle: "italic",
             }}
           >
-            "A questão deixou de ser{" "}
-            <span style={{ color: "var(--lavender-2)", fontStyle: "normal" }}>'O que é possível?'</span>
-            <br />e passou a ser{" "}
-            <span style={{ color: "var(--lavender-2)", fontStyle: "normal" }}>'Como fazer isso acontecer?'"</span>
+            É por isso que você ainda não manifestou o{" "}
+            <span style={{ color: "var(--lavender-2)", fontStyle: "normal" }}>"impossível"</span>
           </h2>
           <div style={{ width: 36, height: 1, margin: "1.75rem auto", background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.40), transparent)" }} />
-          <p style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "rgba(210,205,230,0.55)", lineHeight: 1.78, maxWidth: 480, margin: "0 auto", fontFamily: "var(--font-body)" }}>
-            Você pensa no futuro.
-            <br />
-            Mas continua sentindo o passado.
-            <br />
-            E nada muda.
+          <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, maxWidth: 480, margin: "0 auto", fontFamily: "var(--font-body)", fontWeight: 500 }}>
+            Você pensa no futuro que quer, mas continua sentindo o passado.
             <br /><br />
-            Você até tenta fazer diferente…
-            <br />
-            Mas seu corpo continua respondendo do mesmo jeito.
+            Seu sistema nervoso ainda está programado para ontem. Então você segue atraindo as mesmas pessoas, oportunidades e limites.
+            <br /><br />
+            Manifestar qualquer coisa — inclusive o que hoje parece fora da sua realidade — exige instalar um novo estado interno, não apenas pensar positivo.
           </p>
         </div>
 
         {/* O Problema card */}
         <div className="card-night reveal">
-          <span className="section-label" style={{ marginBottom: "1.5rem" }}>O Problema</span>
-
           <div className="quote-night">
             <blockquote className="font-display">
               "Quando você pensa os mesmos pensamentos, faz as mesmas escolhas e demonstra os mesmos hábitos...
@@ -84,7 +75,7 @@ export default function Problem() {
                 }}
               >
                 <span style={{ color: "var(--lavender)", fontSize: "0.5rem", flexShrink: 0, marginTop: 7, display: "inline-block", width: 5, height: 5, borderRadius: "50%", border: "1.5px solid var(--lavender)", opacity: 0.7 }} />
-                <p className="problem-bullet-text" style={{ fontSize: "0.9375rem", color: "rgba(210,205,230,0.65)", lineHeight: 1.6, fontFamily: "var(--font-body)" }}>
+                <p className="problem-bullet-text" style={{ fontSize: "1rem", color: "rgba(210,205,230,0.88)", lineHeight: 1.7, fontFamily: "var(--font-body)", fontWeight: 500 }}>
                   {item}
                 </p>
               </div>
@@ -100,7 +91,7 @@ export default function Problem() {
           .problem-break { display: none; }
           .bullets-grid { grid-template-columns: 1fr !important; }
           .problem-bullet { padding: 0.95rem 1rem !important; }
-          .problem-bullet-text { font-size: 0.9375rem !important; }
+          .problem-bullet-text { font-size: 1rem !important; }
         }
       `}</style>
     </section>

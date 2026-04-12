@@ -75,9 +75,12 @@ export default function Hero() {
               borderRadius: 999,
               padding: "6px 16px",
             }}>
-              <span style={{ color: "rgba(196,152,60,0.80)" }}>✦</span>
+              <span style={{ color: "#C4983C", fontSize: 10 }}>★★★★★</span>
+              <span style={{ color: "rgba(210,200,255,0.95)", fontWeight: 600 }}>4.9/5</span>
+              <span style={{ width: 1, height: 10, background: "rgba(148,136,196,0.30)", display: "inline-block" }} />
+              <span>Mais de </span>
               <CountUp to={2400} prefix="+" separator="." style={{ color: "rgba(210,200,255,0.95)", fontWeight: 600 }} />
-              <span>pessoas</span>
+              <span>usuários</span>
               <span style={{ width: 1, height: 10, background: "rgba(148,136,196,0.30)", display: "inline-block" }} />
               <span style={{ color: "rgba(196,152,60,0.70)", letterSpacing: "0.16em", textTransform: "uppercase", fontSize: 9 }}>Método Dispenza</span>
             </span>
@@ -96,9 +99,9 @@ export default function Hero() {
               marginBottom: 24,
             }}
           >
-            Você não precisa repetir o passado.
+            Manifeste qualquer coisa —
             <br />
-            Treine um{" "}
+            até o que hoje parece{" "}
             <span style={{
               background: "linear-gradient(120deg, #a89de0 0%, #d4caff 38%, #ffffff 52%, #d4caff 68%, #a89de0 100%)",
               backgroundSize: "220% auto",
@@ -107,25 +110,24 @@ export default function Hero() {
               backgroundClip: "text",
               animation: "hero-shine 6s linear infinite",
             }}>
-              novo estado
+              impossível.
             </span>
-            {" "}em poucos minutos.
           </h1>
 
           {/* ── SUBHEADLINE ── */}
           <p
             style={{
-              fontSize: "clamp(0.9375rem, 1.35vw, 1.0625rem)",
-              color: "rgba(210,205,230,0.72)",
-              lineHeight: 1.82,
+              fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+              color: "rgba(210,205,230,0.90)",
+              lineHeight: 1.72,
               maxWidth: 450,
               marginBottom: "1.25rem",
               fontFamily: "var(--font-body)",
-              fontWeight: 400,
+              fontWeight: 500,
             }}
           >
-            Uma experiência guiada para sair do automático
-            e começar a mudar o que você sente — e o que você atrai.
+            Treine, em poucos minutos por dia, o estado interno de quem já vive o seu desejo.
+            Pare de sabotar o que quer criar.
           </p>
 
           {/* ── PRIMARY CTA ── */}
@@ -156,7 +158,7 @@ export default function Hero() {
                 boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50)",
               }}
             >
-              <span style={{ position: "relative", zIndex: 1 }}>Começar experiência gratuita</span>
+              <span style={{ position: "relative", zIndex: 1 }}>Começar agora — grátis, sem cadastro, menos de 3 minutos</span>
               {/* Shine overlay */}
               <span className="cta-shine" style={{
                 position: "absolute", inset: 0,
@@ -168,10 +170,10 @@ export default function Hero() {
 
             <p className="font-mono" style={{
               fontSize: "0.6875rem",
-              color: "rgba(192,180,224,0.38)",
+              color: "rgba(192,180,224,0.68)",
               letterSpacing: "0.12em",
             }}>
-              Sem cadastro · leva menos de 2 minutos
+              Sem cadastro · Sem compromisso · Menos de 3 minutos
             </p>
           </div>
 
@@ -210,10 +212,10 @@ export default function Hero() {
             <div style={{ width: 28, height: 1, background: "rgba(148,136,196,0.28)" }} />
             <p className="font-mono" style={{
               fontSize: "0.6563rem",
-              color: "rgba(192,180,224,0.32)",
+              color: "rgba(192,180,224,0.62)",
               letterSpacing: "0.10em",
             }}>
-              Baseado em "Como se Tornar Sobrenatural" (Dr. Joe Dispenza)
+              Baseado na metodologia do Dr. Joe Dispenza, usada por mais de 2.400 pessoas para mudar emoções, hábitos e resultados.
             </p>
           </div>
         </div>
@@ -310,10 +312,10 @@ export default function Hero() {
               fontSize: 12, color: "rgba(235,229,218,0.90)",
               lineHeight: 1.6, fontStyle: "italic",
             }}>
-              "Na terceira sessão já sentia que estava criando outra versão de mim."
+              "Na terceira sessão já sentia que estava criando outra versão de mim — e as situações começaram a mudar do lado de fora."
             </p>
             <p className="font-mono" style={{
-              fontSize: 9.5, color: "rgba(192,180,224,0.40)",
+              fontSize: 9.5, color: "rgba(192,180,224,0.72)",
               marginTop: 8, letterSpacing: "0.06em",
             }}>
               Ana M., 34 anos
@@ -340,7 +342,7 @@ export default function Hero() {
           >
             <CountUp to={91} suffix="%" duration={1600} className="font-display gold-text" style={{ fontSize: "1.75rem", fontWeight: 700, lineHeight: 1, display: "block" }} />
             <p className="font-mono" style={{
-              fontSize: 9, color: "rgba(192,180,224,0.45)",
+              fontSize: 9, color: "rgba(192,180,224,0.72)",
               letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 5,
             }}>
               percebem mudanças<br />concretas na 1ª semana

@@ -10,41 +10,53 @@ const badges = [
 
 export default function SocialProof() {
   return (
-    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
-      {/* Gradient mesh background */}
+    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden", background: "#F2EBE0" }}>
+      {/* Gradient mesh — radial overlays only; linear removed so edges stay flat #F2EBE0 */}
       <div style={{
         position: "absolute", inset: 0,
         background: `
           radial-gradient(ellipse 80% 60% at 15% 20%, rgba(196,152,60,0.05) 0%, transparent 60%),
-          radial-gradient(ellipse 60% 70% at 85% 80%, rgba(196,152,60,0.06) 0%, transparent 55%),
-          linear-gradient(160deg, #F2EBE0 0%, #F2EBE0 40%, #ede8da 100%)
+          radial-gradient(ellipse 60% 70% at 85% 80%, rgba(196,152,60,0.06) 0%, transparent 55%)
         `,
         pointerEvents: "none",
       }} />
 
       <div style={{ maxWidth: 1000, margin: "0 auto", position: "relative", zIndex: 2, textAlign: "center" }}>
-        <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>A Ciência</span>
+        <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Prova Social</span>
 
         <h2
           className="font-display reveal"
-          style={{ fontSize: "clamp(1.75rem, 4vw, 2.6rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.35, marginBottom: "0.75rem", fontStyle: "italic" }}
+          style={{ fontSize: "clamp(1.75rem, 4vw, 2.6rem)", fontWeight: 700, color: "var(--ink)", lineHeight: 1.25, marginBottom: "1.25rem" }}
         >
-          "Quando você muda a forma como se apresenta ao mundo,{" "}
-          <span style={{ color: "var(--ink)", fontStyle: "normal" }}>o mundo começa a responder diferente.</span>"
+          91% percebem mudanças concretas{" "}
+          <span style={{ color: "var(--gold)" }}>na primeira semana</span>
         </h2>
 
         <p
           className="font-display reveal"
-          style={{ fontSize: "clamp(0.9rem, 1.8vw, 1rem)", color: "var(--ink-muted)", lineHeight: 1.75, marginBottom: "0.5rem", fontStyle: "italic" }}
+          style={{ fontSize: "clamp(1rem, 1.8vw, 1.125rem)", color: "var(--ink-dim)", lineHeight: 1.72, marginBottom: "2rem", maxWidth: 560, margin: "0 auto 2rem", fontWeight: 500 }}
         >
-          A realidade começa dentro de você.
+          Você escolhe o que quer manifestar. Treina o estado de quem já vive isso. E começa a notar mudanças reais em como se sente, reage e no que atrai.
         </p>
-        <p
-          className="font-display reveal"
-          style={{ fontSize: "clamp(0.9rem, 1.8vw, 1rem)", color: "var(--ink-muted)", lineHeight: 1.75, marginBottom: "clamp(2.5rem, 6vw, 4rem)", fontStyle: "italic" }}
-        >
-          Dr. Joe Dispenza
-        </p>
+
+        <div className="reveal" style={{
+          background: "rgba(255,252,248,0.80)",
+          border: "1px solid rgba(28,20,40,0.09)",
+          borderRadius: 16,
+          padding: "1.5rem 2rem",
+          maxWidth: 480,
+          margin: "0 auto clamp(2.5rem, 6vw, 4rem)",
+          textAlign: "left",
+          boxShadow: "0 2px 16px rgba(28,20,40,0.06)",
+        }}>
+          <div style={{ display: "flex", gap: 2, marginBottom: "0.75rem" }}>
+            {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "var(--gold)", fontSize: 13 }}>★</span>)}
+          </div>
+          <p className="font-display" style={{ fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)", color: "var(--ink)", lineHeight: 1.65, fontStyle: "italic", marginBottom: "0.75rem" }}>
+            "Na terceira sessão já sentia que estava criando outra versão de mim — e as situações começaram a mudar do lado de fora."
+          </p>
+          <p className="font-mono" style={{ fontSize: "0.6875rem", color: "var(--ink-dim)", letterSpacing: "0.10em" }}>Ana M., 34 anos</p>
+        </div>
 
         <div className="badge-grid reveal" data-stagger>
           {badges.map((b) => (

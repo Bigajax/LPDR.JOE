@@ -5,14 +5,14 @@
   --night:        #0D0B1A;
   --night-2:      #140F26;
   --fog:          #EBE5DA;
-  --fog-dim:      rgba(235, 229, 218, 0.62);
-  --fog-muted:    rgba(235, 229, 218, 0.38);
+  --fog-dim:      rgba(235, 229, 218, 0.85);  /* was 0.62 — WCAG AA on dark bg */
+  --fog-muted:    rgba(235, 229, 218, 0.65);  /* was 0.38 */
 
   --day:          #F2EBE0;
   --day-2:        #E8DDD0;
   --ink:          #1C1428;
-  --ink-dim:      rgba(28, 20, 40, 0.62);
-  --ink-muted:    rgba(28, 20, 40, 0.40);
+  --ink-dim:      rgba(28, 20, 40, 0.75);     /* was 0.62 — WCAG AA on light bg */
+  --ink-muted:    rgba(28, 20, 40, 0.58);     /* was 0.40 */
 
   --lavender:     #9488C4;
   --lavender-2:   #C0B4E0;
@@ -155,20 +155,20 @@ body::before {
 .section-label {
   font-family: var(--font-mono, var(--font-mono-fallback));
   font-size: 0.6875rem;
-  font-weight: 300;
+  font-weight: 500;              /* was 300 */
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(196, 152, 60, 0.60);
+  color: rgba(196, 152, 60, 0.75); /* was 0.60 */
   display: block;
 }
 
 .section-label-ink {
   font-family: var(--font-mono, var(--font-mono-fallback));
   font-size: 0.6875rem;
-  font-weight: 300;
+  font-weight: 500;              /* was 300 */
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: rgba(28, 20, 40, 0.42);
+  color: rgba(28, 20, 40, 0.58);  /* was 0.42 */
   display: block;
 }
 
@@ -240,10 +240,11 @@ body::before {
 
 .quote-night p, .quote-night blockquote {
   font-family: var(--font-display, Georgia, serif);
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  line-height: 1.75;
+  font-size: clamp(1.125rem, 2vw, 1.3rem); /* min raised to 18px */
+  line-height: 1.78;
   font-style: italic;
   color: var(--fog-dim);
+  font-weight: 500;
 }
 
 @media (max-width: 640px) {
@@ -275,10 +276,11 @@ body::before {
 
 .quote-day p, .quote-day blockquote {
   font-family: var(--font-display, Georgia, serif);
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  line-height: 1.75;
+  font-size: clamp(1.125rem, 2vw, 1.3rem); /* min raised to 18px */
+  line-height: 1.78;
   font-style: italic;
   color: var(--ink-dim);
+  font-weight: 500;
 }
 
 /* ── Scroll reveal ── */
@@ -362,3 +364,27 @@ section { position: relative; }
 details summary { list-style: none; cursor: pointer; }
 details summary::-webkit-details-marker { display: none; }
 details[open] .faq-arrow { transform: rotate(180deg); }
+
+/* ── Legibility baseline ──────────────────────────────────────────
+   Applies only to section body paragraphs; does not touch labels,
+   headings, or mono-spaced UI text which have intentional sizing.
+   ──────────────────────────────────────────────────────────────── */
+section p:not(.font-mono) {
+  line-height: 1.72;
+}
+
+/* 18px body minimum on desktop */
+@media (min-width: 769px) {
+  section p:not(.font-mono):not([class*="font-display"]) {
+    font-size: max(1.125rem, 1em);
+  }
+}
+
+/* 16px body minimum on mobile */
+@media (max-width: 768px) {
+  section p:not(.font-mono):not([class*="font-display"]) {
+    font-size: max(1rem, 1em);
+  }
+  /* mobile problem bullet override */
+  .problem-bullet-text { font-size: 1rem !important; }
+}

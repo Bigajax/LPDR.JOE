@@ -149,7 +149,7 @@ const items: Item[] = [
     type: "minigame",
     tagline: "Exercício interativo · Antes de começar",
     title: "Criando seu potencial",
-    description: "Defina o que você quer manifestar, em palavras suas. Escolha o estado de quem já vive isso. Quando intenção e frequência alinham, você cria uma nova assinatura quântica.",
+    description: "Defina, em palavras suas, o que quer manifestar — e o estado de quem já vive isso. Você sai desta sessão com uma assinatura quântica clara.",
     visual: <Minigame1Preview />,
   },
   {
@@ -174,7 +174,7 @@ const items: Item[] = [
     tagline: "Sessão 2",
     title: "BÊNÇÃO DOS CENTROS DE ENERGIA",
     duration: "7 min",
-    description: "Reprograme cada centro de energia para maior saúde e coerência interna.",
+    description: "Reequilibre cada centro de energia para maior saúde e coerência interna.",
     imageSrc: "/images/Ben%C3%A7%C3%B5es%20dos%20centros.webp",
     progressWidth: "36%",
     visual: (
@@ -190,7 +190,7 @@ const items: Item[] = [
     type: "minigame",
     tagline: "Exercício interativo · Antes da próxima sessão",
     title: "Recondicione seu corpo e mente",
-    description: "Observe o que está ativo no seu sistema nervoso agora. Escolha o padrão que quer instalar. Sua biologia obedece ao estado que você sustenta.",
+    description: "Observe o que está preso no seu sistema nervoso agora. Escolha o que seu corpo precisa descer e o estado que você governa.",
     visual: <Minigame2Preview />,
   },
   {
@@ -198,7 +198,7 @@ const items: Item[] = [
     tagline: "Sessão 3",
     title: "RECONDICIONE CORPO E MENTE",
     duration: "7 min",
-    description: "Ensine seu corpo a viver no futuro, antes de ele acontecer.",
+    description: "Ensine seu corpo a viver no futuro, antes dele chegar. É assim que você torna possível o que hoje parece improvável.",
     imageSrc: "/images/Recondicione.webp",
     progressWidth: "22%",
     visual: (
@@ -261,12 +261,12 @@ export default function Meditations() {
         <div style={{ textAlign: "center", marginBottom: "5.5rem" }}>
           <span className="section-label reveal" style={{ marginBottom: "1.25rem", color: "rgba(148,136,196,0.45)" }}>O Protocolo</span>
           <h2 className="font-display reveal" style={{ fontSize: "clamp(1.75rem, 5vw, 2.6rem)", fontWeight: 600, color: "rgba(235,229,218,0.92)", marginBottom: "1.25rem", lineHeight: 1.3 }}>
-            5 Sessões + 2 Exercícios para{" "}
-            <span style={{ color: "var(--lavender-2)" }}>Começar a Criar uma Nova Realidade</span>
+            5 sessões guiadas + 2 exercícios interativos para{" "}
+            <span style={{ color: "var(--lavender-2)" }}>manifestar qualquer coisa</span>
           </h2>
           <div style={{ width: 36, height: 1, margin: "1.75rem auto", background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.40), transparent)" }} />
-          <p className="reveal" style={{ fontSize: "clamp(0.9375rem, 1.8vw, 1.05rem)", color: "rgba(210,205,230,0.55)", maxWidth: 520, margin: "0 auto", lineHeight: 1.78, fontFamily: "var(--font-body)" }}>
-            Curtas, progressivas e guiadas, projetadas para mover você de quem você foi para quem você está se tornando.
+          <p className="reveal" style={{ fontSize: "clamp(1rem, 1.8vw, 1.125rem)", color: "rgba(210,205,230,0.88)", maxWidth: 520, margin: "0 auto", lineHeight: 1.72, fontFamily: "var(--font-body)", fontWeight: 500 }}>
+            Começando pelas emoções que a sua versão do futuro já sente.
           </p>
         </div>
 
@@ -338,9 +338,10 @@ export default function Meditations() {
 
                   <p className="font-display" style={{
                     fontSize: "1.0625rem",
-                    color: "rgba(210,205,230,0.55)",
-                    lineHeight: 1.78,
+                    color: "rgba(210,205,230,0.88)",
+                    lineHeight: 1.72,
                     fontStyle: "italic",
+                    fontWeight: 500,
                   }}>
                     "{item.description}"
                   </p>
@@ -352,7 +353,7 @@ export default function Meditations() {
                         alignItems: "center",
                         gap: 6,
                         fontSize: "0.75rem",
-                        color: "rgba(192,180,224,0.45)",
+                        color: "rgba(192,180,224,0.72)",
                         fontFamily: "var(--font-mono)",
                         letterSpacing: "0.10em",
                       }}>

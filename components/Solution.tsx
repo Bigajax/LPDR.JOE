@@ -4,39 +4,44 @@ const steps = [
   {
     number: "1",
     label: "Intenção",
-    title: "Você define com clareza o que quer criar",
-    text: "",
+    title: "Você define com clareza o que quer manifestar",
+    text: "Do mais simples ao aparentemente impossível.",
   },
   {
     number: "2",
     label: "Frequência",
-    title: "Aprende a gerar o estado emocional correspondente",
-    text: "",
+    title: "Aprende a gerar o estado emocional de quem já vive isso",
+    text: "Segurança, amor, abundância, cura.",
   },
   {
     number: "3",
     label: "Materialização",
-    title: "Treina esse estado até ele se tornar natural",
-    text: "",
+    title: "Treina esse estado até ele se tornar seu novo normal",
+    text: "Quando mente e corpo vibram na mesma frequência, seu sistema para de resistir e começa a cooperar.",
   },
 ];
 
 export default function Solution() {
   return (
-    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden" }}>
-      {/* Gradient mesh */}
+    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden", background: "#F2EBE0" }}>
+      {/* Gradient mesh — radial overlays only; linear removed so edges stay flat #F2EBE0 */}
       <div style={{
         position: "absolute", inset: 0, pointerEvents: "none",
         background: `
           radial-gradient(ellipse 70% 50% at 80% 10%, rgba(196,152,60,0.05) 0%, transparent 55%),
-          radial-gradient(ellipse 50% 60% at 10% 90%, rgba(196,152,60,0.06) 0%, transparent 50%),
-          linear-gradient(155deg, #F2EBE0 0%, #ede6d8 55%, #F2EBE0 100%)
+          radial-gradient(ellipse 50% 60% at 10% 90%, rgba(196,152,60,0.06) 0%, transparent 50%)
         `,
       }} />
 
       <div style={{ maxWidth: 1060, margin: "0 auto", position: "relative", zIndex: 2 }}>
         <div style={{ textAlign: "center", marginBottom: "clamp(2.75rem, 6vw, 5rem)" }}>
           <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Como Funciona</span>
+          <p
+            className="font-mono reveal"
+            style={{ fontSize: "clamp(0.75rem, 1.4vw, 0.875rem)", color: "var(--gold)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "1rem" }}
+          >
+            Manifestar não é mágica. É neurologia, energia e treino diário.
+          </p>
           <h2
             className="font-display reveal"
             style={{
@@ -106,7 +111,7 @@ export default function Solution() {
               <h3 className="font-display" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.4rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.3, marginBottom: "0.75rem" }}>
                 {step.title}
               </h3>
-              <p style={{ fontSize: "0.9rem", color: "var(--ink-dim)", lineHeight: 1.65, fontFamily: "var(--font-body)" }}>
+              <p style={{ fontSize: "1rem", color: "var(--ink-dim)", lineHeight: 1.72, fontFamily: "var(--font-body)", fontWeight: 500 }}>
                 {step.text}
               </p>
             </div>
