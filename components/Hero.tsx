@@ -309,8 +309,8 @@ export default function Hero() {
               ))}
             </div>
             <p className="font-display" style={{
-              fontSize: 12, color: "rgba(235,229,218,0.90)",
-              lineHeight: 1.6, fontStyle: "italic",
+              fontSize: 14, color: "rgba(235,229,218,0.90)",
+              lineHeight: 1.65, fontStyle: "italic",
             }}>
               "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora."
             </p>
