@@ -1,4 +1,5 @@
 "use client";
+import { useState, useRef } from "react";
 import IphoneMockup from "./IphoneMockup";
 import Image from "next/image";
 
@@ -13,7 +14,6 @@ function MinigamePhone({ children }: { children: React.ReactNode }) {
         border: "2px solid #2A2A2A",
         boxShadow: "0 40px 80px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.06)",
       }}>
-        {/* Notch */}
         <div style={{ width: 90, height: 24, background: "#000", borderRadius: 14, margin: "0 auto 4px" }} />
         <div style={{
           borderRadius: 28,
@@ -25,7 +25,6 @@ function MinigamePhone({ children }: { children: React.ReactNode }) {
           padding: "10px 14px 14px",
           position: "relative",
         }}>
-          {/* Status bar */}
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
             <span style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.85)" }}>9:41</span>
             <div style={{ display: "flex", gap: 4, alignItems: "center" }}>
@@ -46,7 +45,6 @@ function MinigamePhone({ children }: { children: React.ReactNode }) {
   );
 }
 
-/* ─── Minigame 1: Criando seu potencial ────────────────────────── */
 function Minigame1Preview() {
   return (
     <MinigamePhone>
@@ -56,7 +54,6 @@ function Minigame1Preview() {
         </div>
         <span style={{ fontSize: 10, color: "rgba(255,255,255,0.55)", letterSpacing: "0.04em" }}>Criando seu potencial</span>
       </div>
-
       <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "10px", marginBottom: 8 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 5 }}>
           <span style={{ width: 14, height: 14, borderRadius: "50%", background: "rgba(148,136,196,0.3)", fontSize: 8, color: "var(--lavender-2)", display: "flex", alignItems: "center", justifyContent: "center" }}>1</span>
@@ -66,23 +63,14 @@ function Minigame1Preview() {
           <p style={{ fontSize: 9.5, color: "rgba(255,255,255,0.55)", fontStyle: "italic" }}>mais liberdade...</p>
         </div>
       </div>
-
       <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "10px", marginBottom: 8 }}>
         <p style={{ fontSize: 9, fontWeight: 700, color: "rgba(148,136,196,0.90)", letterSpacing: "0.10em", textTransform: "uppercase", marginBottom: 5 }}>Que frequência você quer irradiar?</p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {["✓ Clareza", "Foco", "Leveza", "Presença"].map((e, i) => (
-            <span key={e} style={{
-              fontSize: 8.5,
-              background: i === 0 ? "rgba(148,136,196,0.25)" : "rgba(255,255,255,0.06)",
-              border: `1px solid ${i === 0 ? "rgba(148,136,196,0.4)" : "rgba(255,255,255,0.10)"}`,
-              borderRadius: 99,
-              padding: "3px 8px",
-              color: i === 0 ? "var(--lavender-2)" : "rgba(255,255,255,0.65)",
-            }}>{e}</span>
+            <span key={e} style={{ fontSize: 8.5, background: i === 0 ? "rgba(148,136,196,0.25)" : "rgba(255,255,255,0.06)", border: `1px solid ${i === 0 ? "rgba(148,136,196,0.4)" : "rgba(255,255,255,0.10)"}`, borderRadius: 99, padding: "3px 8px", color: i === 0 ? "var(--lavender-2)" : "rgba(255,255,255,0.65)" }}>{e}</span>
           ))}
         </div>
       </div>
-
       <div style={{ background: "rgba(148,136,196,0.25)", border: "1px solid rgba(148,136,196,0.30)", borderRadius: 8, padding: "7px", textAlign: "center", marginTop: "auto" }}>
         <p style={{ fontSize: 9.5, color: "rgba(192,180,224,0.90)", fontWeight: 600 }}>Continuar →</p>
       </div>
@@ -90,7 +78,6 @@ function Minigame1Preview() {
   );
 }
 
-/* ─── Minigame 2: Recondicione corpo e mente ───────────────────── */
 function Minigame2Preview() {
   return (
     <MinigamePhone>
@@ -100,11 +87,9 @@ function Minigame2Preview() {
         </div>
         <span style={{ fontSize: 9.5, color: "rgba(255,255,255,0.55)", letterSpacing: "0.04em" }}>Recondicione corpo e mente</span>
       </div>
-
       <p style={{ fontSize: 8.5, color: "rgba(255,255,255,0.40)", fontStyle: "italic", marginBottom: 10, lineHeight: 1.4 }}>
         Observe o que está presente no seu corpo agora.
       </p>
-
       <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "9px", marginBottom: 7 }}>
         <p style={{ fontSize: 8.5, fontWeight: 700, color: "rgba(148,136,196,0.85)", letterSpacing: "0.10em", textTransform: "uppercase", marginBottom: 4 }}>Padrão Atual</p>
         <p style={{ fontSize: 8.5, color: "rgba(255,255,255,0.50)", marginBottom: 6 }}>O que está ativo no seu corpo agora?</p>
@@ -114,7 +99,6 @@ function Minigame2Preview() {
           ))}
         </div>
       </div>
-
       <div style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 10, padding: "9px", marginBottom: 8 }}>
         <p style={{ fontSize: 8.5, fontWeight: 700, color: "rgba(196,152,60,0.85)", letterSpacing: "0.10em", textTransform: "uppercase", marginBottom: 4 }}>Novo Padrão</p>
         <p style={{ fontSize: 8.5, color: "rgba(255,255,255,0.50)", marginBottom: 6 }}>Qual estado você quer instalar?</p>
@@ -124,7 +108,6 @@ function Minigame2Preview() {
           ))}
         </div>
       </div>
-
       <div style={{ background: "rgba(126,206,222,0.18)", border: "1px solid rgba(126,206,222,0.25)", borderRadius: 8, padding: "7px", textAlign: "center", marginTop: "auto" }}>
         <p style={{ fontSize: 9, color: "rgba(180,225,235,0.90)", fontWeight: 600 }}>Criar esse estado →</p>
       </div>
@@ -149,7 +132,7 @@ const items: Item[] = [
     type: "minigame",
     tagline: "Exercício interativo · Antes de começar",
     title: "Criando seu potencial",
-    description: "Defina, em palavras suas, o que quer manifestar — e o estado de quem já vive isso. Você sai desta sessão com uma assinatura quântica clara.",
+    description: "Defina, em palavras suas, o que quer manifestar, e o estado de quem já vive isso. Você sai desta sessão com uma assinatura quântica clara.",
     visual: <Minigame1Preview />,
   },
   {
@@ -248,12 +231,198 @@ const items: Item[] = [
 
 const BG = "#080613";
 
+/* ─── Mobile Carousel ────────────────────────────────────────────── */
+function MobileCarousel() {
+  const [current, setCurrent] = useState(0);
+  const touchStartX = useRef(0);
+  const touchStartY = useRef(0);
+  const isDragging = useRef(false);
+
+  const prev = () => setCurrent((c) => Math.max(c - 1, 0));
+  const next = () => setCurrent((c) => Math.min(c + 1, items.length - 1));
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isDragging.current = false;
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    const dx = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const dy = Math.abs(e.touches[0].clientY - touchStartY.current);
+    if (dx > dy && dx > 8) isDragging.current = true;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (!isDragging.current) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 44) next();
+    else if (diff < -44) prev();
+  };
+
+  const item = items[current];
+  const isMinigame = item.type === "minigame";
+
+  return (
+    <div style={{ width: "100%" }}>
+      {/* Slide area */}
+      <div
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        style={{ touchAction: "pan-y" }}
+      >
+        {/* Mockup */}
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1.75rem", position: "relative" }}>
+          {isMinigame && (
+            <div style={{
+              position: "absolute",
+              width: 280, height: 280,
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(100,80,180,0.18) 0%, transparent 70%)",
+              top: "50%", left: "50%",
+              transform: "translate(-50%,-50%)",
+              pointerEvents: "none",
+            }} />
+          )}
+          <div style={{ transition: "opacity 0.25s ease, transform 0.25s ease" }}>
+            {item.visual}
+          </div>
+        </div>
+
+        {/* Text */}
+        <div style={{ textAlign: "center", padding: "0 1rem" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 7, marginBottom: "0.75rem" }}>
+            <span style={{
+              display: "inline-block", width: 6, height: 6, borderRadius: "50%",
+              background: isMinigame ? "var(--lavender)" : "var(--gold)",
+              flexShrink: 0,
+            }} />
+            <p className="font-mono" style={{
+              fontSize: "0.625rem",
+              color: isMinigame ? "rgba(192,180,224,0.70)" : "rgba(196,152,60,0.70)",
+              textTransform: "uppercase",
+              letterSpacing: "0.16em",
+            }}>
+              {item.tagline}{item.duration ? ` · ${item.duration}` : ""}
+            </p>
+          </div>
+
+          <h3 className="font-display" style={{
+            fontSize: isMinigame ? "1.5rem" : "1.35rem",
+            fontWeight: isMinigame ? 600 : 700,
+            color: "rgba(235,229,218,0.92)",
+            marginBottom: "0.875rem",
+            lineHeight: 1.2,
+            letterSpacing: "-0.01em",
+          }}>
+            {item.title}
+          </h3>
+
+          <div style={{ width: 24, height: 1, background: `linear-gradient(90deg, ${isMinigame ? "rgba(148,136,196,0.50)" : "rgba(196,152,60,0.50)"}, transparent)`, margin: "0 auto 0.875rem" }} />
+
+          <p className="font-display" style={{
+            fontSize: "1rem",
+            color: "rgba(210,205,230,0.88)",
+            lineHeight: 1.7,
+            fontStyle: "italic",
+            fontWeight: 500,
+            maxWidth: 320,
+            margin: "0 auto",
+          }}>
+            "{item.description}"
+          </p>
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "1.25rem", marginTop: "2rem" }}>
+        {/* Prev */}
+        <button
+          onClick={prev}
+          disabled={current === 0}
+          aria-label="Anterior"
+          style={{
+            width: 36, height: 36, borderRadius: "50%",
+            border: "1px solid rgba(148,136,196,0.20)",
+            background: "rgba(148,136,196,0.06)",
+            color: current === 0 ? "rgba(148,136,196,0.20)" : "rgba(192,180,224,0.70)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            cursor: current === 0 ? "default" : "pointer",
+            transition: "all 0.2s ease",
+            flexShrink: 0,
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+
+        {/* Dots */}
+        <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+          {items.map((it, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Ir para ${it.title}`}
+              style={{
+                width: i === current ? 18 : 6,
+                height: 6,
+                borderRadius: 999,
+                border: "none",
+                background: i === current
+                  ? (items[i].type === "minigame" ? "var(--lavender)" : "var(--gold)")
+                  : "rgba(148,136,196,0.22)",
+                cursor: "pointer",
+                padding: 0,
+                transition: "width 0.3s ease, background 0.3s ease",
+                flexShrink: 0,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Next */}
+        <button
+          onClick={next}
+          disabled={current === items.length - 1}
+          aria-label="Próximo"
+          style={{
+            width: 36, height: 36, borderRadius: "50%",
+            border: "1px solid rgba(148,136,196,0.20)",
+            background: "rgba(148,136,196,0.06)",
+            color: current === items.length - 1 ? "rgba(148,136,196,0.20)" : "rgba(192,180,224,0.70)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            cursor: current === items.length - 1 ? "default" : "pointer",
+            transition: "all 0.2s ease",
+            flexShrink: 0,
+          }}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Counter */}
+      <p className="font-mono" style={{
+        textAlign: "center",
+        fontSize: "0.5625rem",
+        color: "rgba(148,136,196,0.35)",
+        letterSpacing: "0.18em",
+        marginTop: "0.875rem",
+      }}>
+        {String(current + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+      </p>
+    </div>
+  );
+}
+
 /* ─── Component ──────────────────────────────────────────────────── */
 export default function Meditations() {
   return (
     <section id="meditations" style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", background: BG, position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "60%", height: 1, background: "linear-gradient(90deg, transparent, rgba(148,136,196,0.10), transparent)" }} />
-
       <div style={{ position: "absolute", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(100,80,180,0.07) 0%, transparent 70%)", top: "30%", left: "50%", transform: "translateX(-50%)", pointerEvents: "none" }} />
 
       <div style={{ maxWidth: 1060, margin: "0 auto" }}>
@@ -270,108 +439,75 @@ export default function Meditations() {
           </p>
         </div>
 
-        {/* Items */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2.75rem, 7vw, 5.5rem)" }}>
-          {items.map((item, idx) => {
-            const isLeft = idx % 2 === 0;
-            const isMinigame = item.type === "minigame";
-
-            return (
-              <div
-                key={item.title}
-                className="reveal med-row"
-                style={{
-                  display: "flex",
-                  flexDirection: isLeft ? "row" : "row-reverse",
-                  alignItems: "center",
-                  gap: "clamp(2.25rem, 6vw, 4.5rem)",
-                }}
-              >
-                {/* Visual */}
-                <div style={{ flexShrink: 0, display: "flex", justifyContent: "center", position: "relative" }}>
-                  {isMinigame && (
-                    <div style={{
-                      position: "absolute",
-                      width: 260, height: 260,
-                      borderRadius: "50%",
-                      background: "radial-gradient(circle, rgba(100,80,180,0.14) 0%, transparent 70%)",
-                      top: "50%", left: "50%",
-                      transform: "translate(-50%,-50%)",
-                      pointerEvents: "none",
-                    }} />
-                  )}
-                  {item.visual}
-                </div>
-
-                {/* Text */}
-                <div style={{ flex: 1, maxWidth: 460 }}>
-                  <div style={{ display: "inline-flex", alignItems: "center", gap: 7, marginBottom: "1rem" }}>
-                    <span style={{
-                      display: "inline-block",
-                      width: 7, height: 7,
-                      borderRadius: "50%",
-                      background: isMinigame ? "var(--lavender)" : "var(--gold)",
-                      flexShrink: 0,
-                    }} />
-                    <p className="font-mono" style={{
-                      fontSize: "0.6875rem",
-                      color: isMinigame ? "rgba(192,180,224,0.70)" : "rgba(196,152,60,0.70)",
-                      textTransform: "uppercase",
-                      letterSpacing: "0.16em",
-                    }}>
-                      {item.tagline}{item.duration ? ` · ${item.duration}` : ""}
-                    </p>
+        {/* Desktop: alternating rows */}
+        <div className="med-desktop">
+          <div style={{ display: "flex", flexDirection: "column", gap: "clamp(2.75rem, 7vw, 5.5rem)" }}>
+            {items.map((item, idx) => {
+              const isLeft = idx % 2 === 0;
+              const isMinigame = item.type === "minigame";
+              return (
+                <div
+                  key={item.title}
+                  className="reveal med-row"
+                  style={{
+                    display: "flex",
+                    flexDirection: isLeft ? "row" : "row-reverse",
+                    alignItems: "center",
+                    gap: "clamp(2.25rem, 6vw, 4.5rem)",
+                  }}
+                >
+                  <div style={{ flexShrink: 0, display: "flex", justifyContent: "center", position: "relative" }}>
+                    {isMinigame && (
+                      <div style={{
+                        position: "absolute", width: 260, height: 260, borderRadius: "50%",
+                        background: "radial-gradient(circle, rgba(100,80,180,0.14) 0%, transparent 70%)",
+                        top: "50%", left: "50%", transform: "translate(-50%,-50%)", pointerEvents: "none",
+                      }} />
+                    )}
+                    {item.visual}
                   </div>
-
-                  <h3 className="font-display" style={{
-                    fontSize: isMinigame ? "clamp(1.6rem, 3.5vw, 2.1rem)" : "clamp(1.4rem, 3vw, 1.85rem)",
-                    fontWeight: isMinigame ? 600 : 700,
-                    color: "rgba(235,229,218,0.92)",
-                    marginBottom: "1.25rem",
-                    lineHeight: 1.2,
-                    letterSpacing: "-0.01em",
-                  }}>
-                    {item.title}
-                  </h3>
-
-                  <div style={{ width: 24, height: 1, background: `linear-gradient(90deg, ${isMinigame ? "rgba(148,136,196,0.50)" : "rgba(196,152,60,0.50)"}, transparent)`, marginBottom: "1.25rem" }} />
-
-                  <p className="font-display" style={{
-                    fontSize: "1.0625rem",
-                    color: "rgba(210,205,230,0.88)",
-                    lineHeight: 1.72,
-                    fontStyle: "italic",
-                    fontWeight: 500,
-                  }}>
-                    "{item.description}"
-                  </p>
-
-                  {isMinigame && (
-                    <div style={{ marginTop: "1.5rem" }}>
-                      <span style={{
-                        display: "inline-flex",
-                        alignItems: "center",
-                        gap: 6,
-                        fontSize: "0.75rem",
-                        color: "rgba(192,180,224,0.72)",
-                        fontFamily: "var(--font-mono)",
-                        letterSpacing: "0.10em",
-                      }}>
-                        <span style={{ width: 16, height: 16, borderRadius: "50%", border: "1px solid rgba(148,136,196,0.30)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 9 }}>✦</span>
-                        Exercício interativo no app
-                      </span>
+                  <div style={{ flex: 1, maxWidth: 460 }}>
+                    <div style={{ display: "inline-flex", alignItems: "center", gap: 7, marginBottom: "1rem" }}>
+                      <span style={{ display: "inline-block", width: 7, height: 7, borderRadius: "50%", background: isMinigame ? "var(--lavender)" : "var(--gold)", flexShrink: 0 }} />
+                      <p className="font-mono" style={{ fontSize: "0.6875rem", color: isMinigame ? "rgba(192,180,224,0.70)" : "rgba(196,152,60,0.70)", textTransform: "uppercase", letterSpacing: "0.16em" }}>
+                        {item.tagline}{item.duration ? ` · ${item.duration}` : ""}
+                      </p>
                     </div>
-                  )}
+                    <h3 className="font-display" style={{ fontSize: isMinigame ? "clamp(1.6rem, 3.5vw, 2.1rem)" : "clamp(1.4rem, 3vw, 1.85rem)", fontWeight: isMinigame ? 600 : 700, color: "rgba(235,229,218,0.92)", marginBottom: "1.25rem", lineHeight: 1.2, letterSpacing: "-0.01em" }}>
+                      {item.title}
+                    </h3>
+                    <div style={{ width: 24, height: 1, background: `linear-gradient(90deg, ${isMinigame ? "rgba(148,136,196,0.50)" : "rgba(196,152,60,0.50)"}, transparent)`, marginBottom: "1.25rem" }} />
+                    <p className="font-display" style={{ fontSize: "1.0625rem", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, fontStyle: "italic", fontWeight: 500 }}>
+                      "{item.description}"
+                    </p>
+                    {isMinigame && (
+                      <div style={{ marginTop: "1.5rem" }}>
+                        <span style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: "0.75rem", color: "rgba(192,180,224,0.72)", fontFamily: "var(--font-mono)", letterSpacing: "0.10em" }}>
+                          <span style={{ width: 16, height: 16, borderRadius: "50%", border: "1px solid rgba(148,136,196,0.30)", display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 9 }}>✦</span>
+                          Exercício interativo no app
+                        </span>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Mobile: carousel */}
+        <div className="med-mobile">
+          <MobileCarousel />
         </div>
       </div>
 
       <style>{`
+        .med-desktop { display: block; }
+        .med-mobile  { display: none;  }
+
         @media (max-width: 768px) {
-          .med-row { flex-direction: column !important; gap: 2.5rem !important; }
+          .med-desktop { display: none;  }
+          .med-mobile  { display: block; }
         }
       `}</style>
     </section>

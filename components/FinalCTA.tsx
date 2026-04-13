@@ -31,7 +31,7 @@ export default function FinalCTA() {
           <span className="section-label" style={{ marginBottom: "1.75rem" }}>Você Já Manifesta</span>
 
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, marginBottom: "1.5rem", fontFamily: "var(--font-body)", fontWeight: 500 }}>
-            Todo dia, seus pensamentos, emoções e hábitos estão criando a sua realidade — mesmo quando você não gosta dela.
+            Todo dia, seus pensamentos, emoções e hábitos estão criando a sua realidade, mesmo quando você não gosta dela.
           </p>
           <p style={{ fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "rgba(210,205,230,0.88)", lineHeight: 1.72, marginBottom: "2.5rem", fontFamily: "var(--font-body)", fontWeight: 500 }}>
             Aqui você aprende a usar esse mesmo mecanismo para manifestar o que realmente quer.
@@ -55,7 +55,7 @@ export default function FinalCTA() {
                 <span style={{ fontSize: "0.75rem", color: "rgba(196,152,60,0.70)", fontFamily: "var(--font-mono)", letterSpacing: "0.08em", flexShrink: 0, marginTop: 2 }}>→</span>
                 <p style={{ fontSize: "0.875rem", color: "rgba(210,205,230,0.60)", fontFamily: "var(--font-body)", lineHeight: 1.55 }}>
                   <strong style={{ color: "rgba(235,229,218,0.80)", fontWeight: 600 }}>{q}</strong>{" "}
-                  <span style={{ color: "rgba(192,180,224,0.50)" }}>—</span>{" "}
+                  <span style={{ color: "rgba(192,180,224,0.50)" }}>·</span>{" "}
                   {a}
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function FinalCTA() {
           </p>
 
           <a href="https://ecofrontend888.vercel.app/app/guest/intro-potencial" target="_blank" rel="noopener noreferrer" className="btn-cta" style={{ fontSize: "1rem", display: "inline-flex", padding: "1.1rem 3rem" }}>
-            Testar agora — 3 minutos para experimentar o estado de quem já está vivendo o impossível
+            Testar agora: 3 minutos para experimentar o estado de quem já está vivendo o impossível
           </a>
         </div>
       </div>

@@ -99,7 +99,7 @@ export default function Hero() {
               marginBottom: 24,
             }}
           >
-            Manifeste qualquer coisa —
+            Manifeste qualquer coisa,
             <br />
             até o que hoje parece{" "}
             <span style={{
@@ -158,7 +158,7 @@ export default function Hero() {
                 boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50)",
               }}
             >
-              <span style={{ position: "relative", zIndex: 1 }}>Começar agora — grátis, sem cadastro, menos de 3 minutos</span>
+              <span style={{ position: "relative", zIndex: 1 }}>Começar agora · grátis · sem cadastro · menos de 3 minutos</span>
               {/* Shine overlay */}
               <span className="cta-shine" style={{
                 position: "absolute", inset: 0,
@@ -312,7 +312,7 @@ export default function Hero() {
               fontSize: 12, color: "rgba(235,229,218,0.90)",
               lineHeight: 1.6, fontStyle: "italic",
             }}>
-              "Na terceira sessão já sentia que estava criando outra versão de mim — e as situações começaram a mudar do lado de fora."
+              "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora."
             </p>
             <p className="font-mono" style={{
               fontSize: 9.5, color: "rgba(192,180,224,0.72)",

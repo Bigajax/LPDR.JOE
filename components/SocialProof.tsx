@@ -53,7 +53,7 @@ export default function SocialProof() {
             {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "var(--gold)", fontSize: 13 }}>★</span>)}
           </div>
           <p className="font-display" style={{ fontSize: "clamp(0.9375rem, 2vw, 1.0625rem)", color: "var(--ink)", lineHeight: 1.65, fontStyle: "italic", marginBottom: "0.75rem" }}>
-            "Na terceira sessão já sentia que estava criando outra versão de mim — e as situações começaram a mudar do lado de fora."
+            "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora."
           </p>
           <p className="font-mono" style={{ fontSize: "0.6875rem", color: "var(--ink-dim)", letterSpacing: "0.10em" }}>Ana M., 34 anos</p>
         </div>

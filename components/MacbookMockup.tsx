@@ -24,8 +24,7 @@ function AppScreen() {
         gap: 8,
         zIndex: 2,
       }}>
-        <Image src="/images/logo-ecotopia.webp" alt="" width={18} height={18} sizes="18px" style={{ objectFit: "contain" }} />
-        <span style={{ fontSize: 8.5, color: "#1a1a2e", fontFamily: "monospace", fontWeight: 700, letterSpacing: "0.08em" }}>ECOTOPIA</span>
+        <Image src="/images/logo-ecotopia.webp" alt="" width={24} height={24} sizes="24px" style={{ objectFit: "contain" }} />
         <div style={{ flex: 1, display: "flex", justifyContent: "center", gap: 18 }}>
           <span style={{ fontSize: 8, color: "rgba(0,0,0,0.45)", fontFamily: "sans-serif", display: "inline-flex", alignItems: "center", gap: 5 }}>
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -40,7 +39,6 @@ function AppScreen() {
             Explorar
           </span>
         </div>
-        <div style={{ width: 20, height: 20, borderRadius: "50%", background: "linear-gradient(135deg,#9488C4,#7a6eb4)", flexShrink: 0 }} />
       </div>
 
       {/* ── Hero area ── */}
@@ -166,7 +164,6 @@ export default function MacbookMockup() {
                 ecotopia.app/protocolo
               </span>
             </div>
-            <div style={{ width: 18, height: 18, borderRadius: "50%", background: "var(--gold)", flexShrink: 0 }} />
           </div>
 
           {/* App screen rendered in code */}

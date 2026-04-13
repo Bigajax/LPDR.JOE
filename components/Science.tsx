@@ -46,7 +46,7 @@ export default function Science() {
           {[
             {
               label: "Expressão Genética",
-              text: "Você não é prisioneiro do seu passado genético ou emocional. O que você pensa e sente hoje — o estado que você sustenta — reprograma seus padrões",
+              text: "Você não é prisioneiro do seu passado genético ou emocional. O que você pensa e sente hoje, o estado que você sustenta, reprograma seus padrões",
               highlight: "e a realidade que você manifesta",
               suffix: ".",
             },

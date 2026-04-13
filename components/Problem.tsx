@@ -40,7 +40,7 @@ export default function Problem() {
             <br /><br />
             Seu sistema nervoso ainda está programado para ontem. Então você segue atraindo as mesmas pessoas, oportunidades e limites.
             <br /><br />
-            Manifestar qualquer coisa — inclusive o que hoje parece fora da sua realidade — exige instalar um novo estado interno, não apenas pensar positivo.
+            Manifestar qualquer coisa, inclusive o que hoje parece fora da sua realidade, exige instalar um novo estado interno, não apenas pensar positivo.
           </p>
         </div>
 
@@ -59,23 +59,36 @@ export default function Problem() {
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.875rem" }} className="bullets-grid">
-            {bullets.map((item) => (
+          <div className="bullets-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0" }}>
+            {bullets.map((item, idx) => (
               <div
                 key={item}
                 className="problem-bullet"
                 style={{
                   display: "flex",
                   alignItems: "flex-start",
-                  gap: "0.875rem",
-                  padding: "1.125rem 1.25rem",
-                  background: "rgba(148,136,196,0.04)",
-                  border: "1px solid rgba(148,136,196,0.09)",
-                  borderRadius: 12,
+                  gap: "1rem",
+                  padding: "1.25rem 1rem 1.25rem 0",
+                  borderTop: idx >= 2 ? "1px solid rgba(148,136,196,0.10)" : "none",
+                  borderRight: idx % 2 === 0 ? "1px solid rgba(148,136,196,0.10)" : "none",
+                  paddingRight: idx % 2 === 0 ? "1.5rem" : "0",
+                  paddingLeft: idx % 2 === 1 ? "1.5rem" : "0",
                 }}
               >
-                <span style={{ color: "var(--lavender)", fontSize: "0.5rem", flexShrink: 0, marginTop: 7, display: "inline-block", width: 5, height: 5, borderRadius: "50%", border: "1.5px solid var(--lavender)", opacity: 0.7 }} />
-                <p className="problem-bullet-text" style={{ fontSize: "1rem", color: "rgba(210,205,230,0.88)", lineHeight: 1.7, fontFamily: "var(--font-body)", fontWeight: 500 }}>
+                <span
+                  className="font-mono problem-bullet-num"
+                  style={{
+                    fontSize: "0.625rem",
+                    color: "rgba(148,136,196,0.45)",
+                    letterSpacing: "0.08em",
+                    flexShrink: 0,
+                    marginTop: 4,
+                    lineHeight: 1,
+                  }}
+                >
+                  0{idx + 1}
+                </span>
+                <p className="problem-bullet-text" style={{ fontSize: "1rem", color: "rgba(210,205,230,0.88)", lineHeight: 1.65, fontFamily: "var(--font-body)", fontWeight: 500 }}>
                   {item}
                 </p>
               </div>
@@ -89,9 +102,8 @@ export default function Problem() {
           .problem-section { padding: 5.75rem 1.25rem 4.75rem !important; }
           .problem-header { margin-bottom: 3.25rem !important; }
           .problem-break { display: none; }
-          .bullets-grid { grid-template-columns: 1fr !important; }
-          .problem-bullet { padding: 0.95rem 1rem !important; }
-          .problem-bullet-text { font-size: 1rem !important; }
+          .problem-bullet-text { font-size: 0.9375rem !important; }
+          .problem-bullet-num { font-size: 0.5625rem !important; }
         }
       `}</style>
     </section>
