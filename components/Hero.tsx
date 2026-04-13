@@ -369,20 +369,45 @@ export default function Hero() {
           0%   { background-position: 220% center; }
           100% { background-position: -220% center; }
         }
+        @keyframes hero-pulse-ring {
+          0%   { box-shadow: 0 0 0 0    rgba(148,136,196,0.65), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
+          65%  { box-shadow: 0 0 0 12px rgba(148,136,196,0),    0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
+          100% { box-shadow: 0 0 0 0    rgba(148,136,196,0),    0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
+        }
+        @keyframes hero-ripple {
+          0%   { transform: translate(-50%, -50%) scale(0); opacity: 0.45; }
+          100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0;  }
+        }
         @keyframes spin-slow {
           from { transform: translate(-50%,-50%) rotate(0deg); }
           to   { transform: translate(-50%,-50%) rotate(360deg); }
+        }
+        .hero-cta {
+          animation: hero-pulse-ring 2.6s ease-out infinite;
+        }
+        .hero-cta::before {
+          content: '';
+          position: absolute;
+          top: 50%; left: 50%;
+          width: 100%; height: 100%;
+          transform: translate(-50%, -50%) scale(0);
+          border-radius: 8px;
+          background: rgba(255,255,255,0.30);
+          opacity: 0;
+          pointer-events: none;
         }
         .hero-cta:hover {
           transform: translateY(-2px) !important;
           box-shadow: 0 0 0 1px rgba(148,136,196,0.40),
                       0 12px 40px rgba(100,80,180,0.55),
                       0 2px 8px rgba(0,0,0,0.50) !important;
+          animation-play-state: paused !important;
         }
         .hero-cta:hover .cta-shine {
           animation: cta-shine-sweep 0.55s ease forwards;
         }
-        .hero-cta:active { transform: translateY(0) !important; }
+        .hero-cta:active { transform: translateY(0) scale(0.97) !important; }
+        .hero-cta:active::before { animation: hero-ripple 0.52s ease-out forwards; }
         @keyframes cta-shine-sweep {
           from { background-position: 200% 0; }
           to   { background-position: -50% 0; }
