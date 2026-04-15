@@ -145,7 +145,6 @@ export default function Solution() {
           <CheckoutButton
             label="Criar minha nova realidade — R$ 37"
             subLabel="Acesso imediato · Sem assinatura"
-            variant="light"
             style={{ fontSize: "1rem" }}
           />
 
