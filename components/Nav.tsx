@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import CheckoutButton from "./CheckoutButton";
 
 const links = [
   { label: "Protocolo", href: "#meditations", id: "meditations" },
@@ -116,15 +117,19 @@ export default function Nav() {
           })}
         </div>
 
-        <a
-          href="https://ecofrontend888.vercel.app/app/guest/intro-potencial"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-cta"
-          style={{ padding: "0.55rem 1.2rem", fontSize: "0.8125rem", minHeight: 40, width: "auto", whiteSpace: "nowrap" }}
-        >
-          Começar
-        </a>
+        <CheckoutButton
+          label="Começar"
+          style={{
+            padding: "0.55rem 1.2rem",
+            fontSize: "0.8125rem",
+            minHeight: 40,
+            width: "auto",
+            whiteSpace: "nowrap",
+            flexDirection: "row",
+            animation: "none",
+            boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 4px 16px rgba(100,80,180,0.35)",
+          }}
+        />
       </div>
 
       <style>{`

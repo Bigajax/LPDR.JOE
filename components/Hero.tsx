@@ -1,10 +1,9 @@
 "use client";
 import MacbookMockup from "./MacbookMockup";
-import CountUp from "./CountUp";
+import CheckoutButton from "./CheckoutButton";
 import dynamic from "next/dynamic";
 
 const NeuralCanvas = dynamic(() => import("./NeuralCanvas"), { ssr: false, loading: () => null });
-
 
 export default function Hero() {
   return (
@@ -24,25 +23,14 @@ export default function Hero() {
         background: "#05030f",
       }}
     >
-      {/* ── Neural universe canvas ── */}
       <NeuralCanvas />
 
-      {/* ── Deep atmospheric glows ── */}
-      <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1,
-        background: "radial-gradient(ellipse 60% 55% at 65% 48%, rgba(100,80,180,0.13) 0%, transparent 70%)",
-      }} />
-      <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1,
-        background: "radial-gradient(ellipse 35% 50% at 8% 85%, rgba(196,152,60,0.06) 0%, transparent 60%)",
-      }} />
-      {/* Hard vignette for depth */}
-      <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1,
-        background: "radial-gradient(ellipse 90% 90% at 50% 50%, transparent 40%, rgba(3,1,10,0.70) 100%)",
-      }} />
+      {/* Atmospheric glows */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1, background: "radial-gradient(ellipse 60% 55% at 65% 48%, rgba(100,80,180,0.13) 0%, transparent 70%)" }} />
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1, background: "radial-gradient(ellipse 35% 50% at 8% 85%, rgba(196,152,60,0.06) 0%, transparent 60%)" }} />
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1, background: "radial-gradient(ellipse 90% 90% at 50% 50%, transparent 40%, rgba(3,1,10,0.70) 100%)" }} />
 
-      {/* ── Two-column layout ── */}
+      {/* Two-column layout */}
       <div
         className="hero-grid"
         style={{
@@ -57,11 +45,10 @@ export default function Hero() {
           zIndex: 2,
         }}
       >
-
-        {/* ════ LEFT ════ */}
+        {/* LEFT */}
         <div className="hero-copy">
 
-          {/* Eyebrow: badge único */}
+          {/* Eyebrow badge */}
           <div className="hero-eyebrow" style={{ marginBottom: "1.75rem" }}>
             <span className="font-mono" style={{
               display: "inline-flex",
@@ -78,15 +65,11 @@ export default function Hero() {
               <span style={{ color: "#C4983C", fontSize: 10 }}>★★★★★</span>
               <span style={{ color: "rgba(210,200,255,0.95)", fontWeight: 600 }}>4.9/5</span>
               <span style={{ width: 1, height: 10, background: "rgba(148,136,196,0.30)", display: "inline-block" }} />
-              <span>Mais de </span>
-              <CountUp to={2400} prefix="+" separator="." style={{ color: "rgba(210,200,255,0.95)", fontWeight: 600 }} />
-              <span>usuários</span>
-              <span style={{ width: 1, height: 10, background: "rgba(148,136,196,0.30)", display: "inline-block" }} />
               <span style={{ color: "rgba(196,152,60,0.70)", letterSpacing: "0.16em", textTransform: "uppercase", fontSize: 9 }}>Método Dispenza</span>
             </span>
           </div>
 
-          {/* ── HEADLINE ── */}
+          {/* HEADLINE */}
           <h1
             className="font-display"
             style={{
@@ -99,9 +82,8 @@ export default function Hero() {
               marginBottom: 24,
             }}
           >
-            Manifeste qualquer coisa,
-            <br />
-            até o que hoje parece{" "}
+            Você sente que está preso
+            <br />nos mesmos padrões…{" "}
             <span style={{
               background: "linear-gradient(120deg, #a89de0 0%, #d4caff 38%, #ffffff 52%, #d4caff 68%, #a89de0 100%)",
               backgroundSize: "220% auto",
@@ -110,79 +92,51 @@ export default function Hero() {
               backgroundClip: "text",
               animation: "hero-shine 6s linear infinite",
             }}>
-              impossível.
+              mesmo tentando mudar?
             </span>
           </h1>
 
-          {/* ── SUBHEADLINE ── */}
-          <p
-            style={{
-              fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
-              color: "rgba(210,205,230,0.90)",
-              lineHeight: 1.72,
-              maxWidth: 450,
-              marginBottom: "1.25rem",
-              fontFamily: "var(--font-body)",
-              fontWeight: 500,
-            }}
-          >
-            Treine, em poucos minutos por dia, o estado interno de quem já vive o seu desejo.
-            Pare de sabotar o que quer criar.
+          {/* SUBHEADLINE */}
+          <p style={{
+            fontSize: "clamp(1rem, 1.5vw, 1.125rem)",
+            color: "rgba(210,205,230,0.90)",
+            lineHeight: 1.72,
+            maxWidth: 450,
+            marginBottom: "0.75rem",
+            fontFamily: "var(--font-body)",
+            fontWeight: 500,
+          }}>
+            Sua mente até quer avançar. Mas algo dentro de você te puxa de volta para o mesmo lugar.
           </p>
 
-          {/* ── PRIMARY CTA ── */}
-          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "1rem" }} className="cta-group">
-            <a
-              href="https://ecofrontend888.vercel.app/app/guest/intro-potencial"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-cta"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 10,
-                padding: "1.125rem 2.875rem",
-                borderRadius: 8,
-                fontFamily: "var(--font-body)",
-                fontWeight: 600,
-                fontSize: "1.0rem",
-                letterSpacing: "0.03em",
-                color: "#ffffff",
-                background: "linear-gradient(135deg, #7c6fc0 0%, #9488C4 50%, #b0a6d8 100%)",
-                border: "1px solid rgba(255,255,255,0.14)",
-                textDecoration: "none",
-                position: "relative",
-                overflow: "hidden",
-                cursor: "pointer",
-                transition: "transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease",
-                boxShadow: "0 0 0 1px rgba(148,136,196,0.30), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50)",
-              }}
-            >
-              <span style={{ position: "relative", zIndex: 1 }}>Começar agora · grátis · sem cadastro · menos de 3 minutos</span>
-              {/* Shine overlay */}
-              <span className="cta-shine" style={{
-                position: "absolute", inset: 0,
-                background: "linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.12) 50%, transparent 60%)",
-                backgroundSize: "200% 100%",
-                backgroundPosition: "200% 0",
-              }} />
-            </a>
+          <p style={{
+            fontSize: "clamp(0.9375rem, 1.3vw, 1.0625rem)",
+            color: "rgba(192,180,224,0.75)",
+            lineHeight: 1.65,
+            maxWidth: 420,
+            marginBottom: "1.75rem",
+            fontFamily: "var(--font-body)",
+            fontWeight: 500,
+          }}>
+            Existe um motivo para isso — e você pode reprogramar esse padrão.
+          </p>
 
-            <p className="font-mono" style={{
-              fontSize: "0.6875rem",
-              color: "rgba(192,180,224,0.68)",
-              letterSpacing: "0.12em",
-            }}>
-              Sem cadastro · Sem compromisso · Menos de 3 minutos
-            </p>
+          {/* PRIMARY CTA */}
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "1rem" }} className="cta-group">
+            <CheckoutButton
+              label="Começar o protocolo agora"
+              subLabel="Sem cadastro · Começa em menos de 3 minutos"
+              className="hero-cta"
+              style={{ fontSize: "1.0rem", padding: "1.125rem 2.875rem" }}
+            />
           </div>
 
-          {/* ── Benefit pills (premium style) ── */}
+          {/* Benefit pills */}
           <div className="hero-pills" style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", marginTop: "2rem", marginBottom: "2.75rem" }}>
             {[
-              { label: "5 sessões guiadas",    icon: "◈" },
-              { label: "7 min por dia",         icon: "◷" },
-              { label: "Acesso imediato",       icon: "⟡" },
+              { label: "5 sessões guiadas", icon: "◈" },
+              { label: "7 min por dia",      icon: "◷" },
+              { label: "Acesso imediato",    icon: "⟡" },
             ].map(({ label, icon }) => (
               <span
                 key={label}
@@ -207,7 +161,7 @@ export default function Hero() {
             ))}
           </div>
 
-          {/* ── Trust line ── */}
+          {/* Trust line */}
           <div style={{ marginTop: "2.5rem", display: "flex", alignItems: "center", gap: 12 }}>
             <div style={{ width: 28, height: 1, background: "rgba(148,136,196,0.28)" }} />
             <p className="font-mono" style={{
@@ -220,147 +174,68 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ════ RIGHT: Mockup ════ */}
+        {/* RIGHT: Mockup */}
         <div
           className="hero-visual"
           style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center" }}
         >
-          {/* Orbital ring */}
+          {/* Orbital rings */}
           <div className="hero-orbit hero-orbit-1" style={{
             position: "absolute",
-            width: "clamp(280px, 38vw, 500px)",
-            height: "clamp(280px, 38vw, 500px)",
-            borderRadius: "50%",
-            border: "1px solid rgba(148,136,196,0.08)",
-            top: "50%", left: "50%",
-            transform: "translate(-50%,-50%)",
-            animation: "spin-slow 40s linear infinite",
-            pointerEvents: "none",
+            width: "clamp(280px, 38vw, 500px)", height: "clamp(280px, 38vw, 500px)",
+            borderRadius: "50%", border: "1px solid rgba(148,136,196,0.08)",
+            top: "50%", left: "50%", transform: "translate(-50%,-50%)",
+            animation: "spin-slow 40s linear infinite", pointerEvents: "none",
           }}>
-            {/* Orbital dot */}
-            <div style={{
-              position: "absolute", top: 0, left: "50%",
-              transform: "translate(-50%,-50%)",
-              width: 5, height: 5, borderRadius: "50%",
-              background: "rgba(192,180,224,0.50)",
-              boxShadow: "0 0 8px rgba(192,180,224,0.60)",
-            }} />
+            <div style={{ position: "absolute", top: 0, left: "50%", transform: "translate(-50%,-50%)", width: 5, height: 5, borderRadius: "50%", background: "rgba(192,180,224,0.50)", boxShadow: "0 0 8px rgba(192,180,224,0.60)" }} />
           </div>
           <div className="hero-orbit hero-orbit-2" style={{
             position: "absolute",
-            width: "clamp(200px, 28vw, 380px)",
-            height: "clamp(200px, 28vw, 380px)",
-            borderRadius: "50%",
-            border: "1px solid rgba(196,152,60,0.06)",
-            top: "50%", left: "50%",
-            transform: "translate(-50%,-50%)",
-            animation: "spin-slow 28s linear infinite reverse",
-            pointerEvents: "none",
+            width: "clamp(200px, 28vw, 380px)", height: "clamp(200px, 28vw, 380px)",
+            borderRadius: "50%", border: "1px solid rgba(196,152,60,0.06)",
+            top: "50%", left: "50%", transform: "translate(-50%,-50%)",
+            animation: "spin-slow 28s linear infinite reverse", pointerEvents: "none",
           }}>
-            {/* Orbital dot gold */}
-            <div style={{
-              position: "absolute", bottom: 0, left: "50%",
-              transform: "translate(-50%,50%)",
-              width: 4, height: 4, borderRadius: "50%",
-              background: "rgba(196,152,60,0.65)",
-              boxShadow: "0 0 8px rgba(196,152,60,0.50)",
-            }} />
+            <div style={{ position: "absolute", bottom: 0, left: "50%", transform: "translate(-50%,50%)", width: 4, height: 4, borderRadius: "50%", background: "rgba(196,152,60,0.65)", boxShadow: "0 0 8px rgba(196,152,60,0.50)" }} />
           </div>
 
-          {/* Central glow behind mockup */}
           <div className="hero-glow" style={{
             position: "absolute",
-            width: "clamp(240px, 32vw, 420px)",
-            height: "clamp(240px, 32vw, 420px)",
+            width: "clamp(240px, 32vw, 420px)", height: "clamp(240px, 32vw, 420px)",
             borderRadius: "50%",
             background: "radial-gradient(circle, rgba(120,100,200,0.18) 0%, rgba(100,80,180,0.08) 45%, transparent 70%)",
-            top: "50%", left: "50%",
-            transform: "translate(-50%,-50%)",
-            pointerEvents: "none",
-            filter: "blur(2px)",
+            top: "50%", left: "50%", transform: "translate(-50%,-50%)",
+            pointerEvents: "none", filter: "blur(2px)",
           }} />
 
-          {/* Mockup */}
           <div className="float-slow hero-mockup" style={{ position: "relative", zIndex: 2, width: "100%", maxWidth: 860, margin: "0 auto" }}>
             <MacbookMockup />
           </div>
 
-          {/* ── Floating testimonial card ── */}
-          <div
-            className="testimonial-card"
-            style={{
-              position: "absolute",
-              bottom: "5%",
-              left: "-8%",
-              background: "rgba(8,5,20,0.88)",
-              backdropFilter: "blur(20px)",
-              WebkitBackdropFilter: "blur(20px)",
-              border: "1px solid rgba(148,136,196,0.22)",
-              borderRadius: 12,
-              padding: "1rem 1.25rem",
-              width: 210,
-              boxShadow: "0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(148,136,196,0.08)",
-              zIndex: 3,
-            }}
-          >
+          {/* Floating testimonial card */}
+          <div className="testimonial-card" style={{
+            position: "absolute", bottom: "5%", left: "-8%",
+            background: "rgba(8,5,20,0.88)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(148,136,196,0.22)", borderRadius: 12,
+            padding: "1rem 1.25rem", width: 210,
+            boxShadow: "0 16px 48px rgba(0,0,0,0.55), 0 0 0 1px rgba(148,136,196,0.08)", zIndex: 3,
+          }}>
             <div style={{ display: "flex", gap: 2.5, marginBottom: 8 }}>
-              {[1,2,3,4,5].map((i) => (
-                <span key={i} style={{ color: "#C4983C", fontSize: 11 }}>★</span>
-              ))}
+              {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "#C4983C", fontSize: 11 }}>★</span>)}
             </div>
-            <p className="font-display" style={{
-              fontSize: 14, color: "rgba(235,229,218,0.90)",
-              lineHeight: 1.65, fontStyle: "italic",
-            }}>
+            <p className="font-display" style={{ fontSize: 14, color: "rgba(235,229,218,0.90)", lineHeight: 1.65, fontStyle: "italic" }}>
               "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora."
             </p>
-            <p className="font-mono" style={{
-              fontSize: 9.5, color: "rgba(192,180,224,0.72)",
-              marginTop: 8, letterSpacing: "0.06em",
-            }}>
+            <p className="font-mono" style={{ fontSize: 9.5, color: "rgba(192,180,224,0.72)", marginTop: 8, letterSpacing: "0.06em" }}>
               Ana M., 34 anos
-            </p>
-          </div>
-
-          {/* ── Floating stat card ── */}
-          <div
-            className="stat-card"
-            style={{
-              position: "absolute",
-              top: "4%",
-              right: "-5%",
-              background: "rgba(8,5,20,0.88)",
-              backdropFilter: "blur(20px)",
-              WebkitBackdropFilter: "blur(20px)",
-              border: "1px solid rgba(196,152,60,0.20)",
-              borderRadius: 12,
-              padding: "0.9rem 1.125rem",
-              zIndex: 3,
-              textAlign: "center",
-              boxShadow: "0 12px 40px rgba(0,0,0,0.50), 0 0 0 1px rgba(196,152,60,0.06)",
-            }}
-          >
-            <CountUp to={91} suffix="%" duration={1600} className="font-display gold-text" style={{ fontSize: "1.75rem", fontWeight: 700, lineHeight: 1, display: "block" }} />
-            <p className="font-mono" style={{
-              fontSize: 9, color: "rgba(192,180,224,0.72)",
-              letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 5,
-            }}>
-              percebem mudanças<br />concretas na 1ª semana
             </p>
           </div>
         </div>
       </div>
 
-      {/* ── Scroll hint ── */}
-      <div className="hero-scroll-hint" style={{
-        position: "absolute", bottom: 28, left: "50%",
-        transform: "translateX(-50%)",
-        display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
-        zIndex: 2,
-      }}>
-        <span className="font-mono" style={{ fontSize: 8.5, color: "rgba(148,136,196,0.30)", letterSpacing: "0.24em", textTransform: "uppercase" }}>
-          scroll
-        </span>
+      {/* Scroll hint */}
+      <div className="hero-scroll-hint" style={{ position: "absolute", bottom: 28, left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: 8, zIndex: 2 }}>
+        <span className="font-mono" style={{ fontSize: 8.5, color: "rgba(148,136,196,0.30)", letterSpacing: "0.24em", textTransform: "uppercase" }}>scroll</span>
         <div style={{ width: 1, height: 30, background: "linear-gradient(180deg, rgba(148,136,196,0.35), transparent)" }} />
       </div>
 
@@ -369,48 +244,9 @@ export default function Hero() {
           0%   { background-position: 220% center; }
           100% { background-position: -220% center; }
         }
-        @keyframes hero-pulse-ring {
-          0%   { box-shadow: 0 0 0 0    rgba(148,136,196,0.65), 0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
-          65%  { box-shadow: 0 0 0 12px rgba(148,136,196,0),    0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
-          100% { box-shadow: 0 0 0 0    rgba(148,136,196,0),    0 8px 32px rgba(100,80,180,0.40), 0 2px 8px rgba(0,0,0,0.50); }
-        }
-        @keyframes hero-ripple {
-          0%   { transform: translate(-50%, -50%) scale(0); opacity: 0.45; }
-          100% { transform: translate(-50%, -50%) scale(3.5); opacity: 0;  }
-        }
         @keyframes spin-slow {
           from { transform: translate(-50%,-50%) rotate(0deg); }
           to   { transform: translate(-50%,-50%) rotate(360deg); }
-        }
-        .hero-cta {
-          animation: hero-pulse-ring 2.6s ease-out infinite;
-        }
-        .hero-cta::before {
-          content: '';
-          position: absolute;
-          top: 50%; left: 50%;
-          width: 100%; height: 100%;
-          transform: translate(-50%, -50%) scale(0);
-          border-radius: 8px;
-          background: rgba(255,255,255,0.30);
-          opacity: 0;
-          pointer-events: none;
-        }
-        .hero-cta:hover {
-          transform: translateY(-2px) !important;
-          box-shadow: 0 0 0 1px rgba(148,136,196,0.40),
-                      0 12px 40px rgba(100,80,180,0.55),
-                      0 2px 8px rgba(0,0,0,0.50) !important;
-          animation-play-state: paused !important;
-        }
-        .hero-cta:hover .cta-shine {
-          animation: cta-shine-sweep 0.55s ease forwards;
-        }
-        .hero-cta:active { transform: translateY(0) scale(0.97) !important; }
-        .hero-cta:active::before { animation: hero-ripple 0.52s ease-out forwards; }
-        @keyframes cta-shine-sweep {
-          from { background-position: 200% 0; }
-          to   { background-position: -50% 0; }
         }
         @media (max-width: 900px) {
           .hero-grid { grid-template-columns: 1fr !important; gap: 3rem !important; }
@@ -418,7 +254,6 @@ export default function Hero() {
           .cta-group { align-items: center !important; }
           .hero-visual { min-height: 320px; }
           .testimonial-card { left: 50% !important; transform: translateX(-50%); bottom: -20px !important; }
-          .stat-card { display: none !important; }
         }
         @media (max-width: 600px) {
           .hero-root { min-height: 100svh !important; padding-top: calc(76px + env(safe-area-inset-top)) !important; padding-bottom: 56px !important; }
@@ -434,12 +269,8 @@ export default function Hero() {
           .hero-orbit, .hero-glow { display: none !important; }
           .hero-mockup { max-width: min(520px, 100%) !important; }
           .testimonial-card {
-            position: relative !important;
-            left: auto !important;
-            bottom: auto !important;
-            transform: none !important;
-            width: min(360px, 92vw) !important;
-            margin: 14px auto 0 !important;
+            position: relative !important; left: auto !important; bottom: auto !important;
+            transform: none !important; width: min(360px, 92vw) !important; margin: 14px auto 0 !important;
           }
         }
       `}</style>

@@ -1,17 +1,22 @@
 "use client";
-import CountUp from "./CountUp";
 
 const badges = [
-  { value: 5,     display: null,    suffix: "",  label: "Sessões",   sub: "guiadas",   isNum: true  },
-  { value: 7,     display: "5 a 7", suffix: "",  label: "Minutos",   sub: "por dia",   isNum: false },
-  { value: null,  display: "✦",     suffix: "",  label: "Protocolo", sub: "testado",   isNum: false },
-  { value: null,  display: "∞",     suffix: "",  label: "Acesso",    sub: "vitalício", isNum: false },
+  { display: "5",   label: "Sessões",   sub: "guiadas"    },
+  { display: "5–7", label: "Minutos",   sub: "por dia"    },
+  { display: "✦",   label: "Protocolo", sub: "testado"    },
+  { display: "∞",   label: "Acesso",    sub: "vitalício"  },
 ];
 
 export default function SocialProof() {
   return (
-    <section style={{ padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)", position: "relative", overflow: "hidden", background: "#F2EBE0" }}>
-      {/* Gradient mesh — radial overlays only; linear removed so edges stay flat #F2EBE0 */}
+    <section
+      style={{
+        padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)",
+        position: "relative",
+        overflow: "hidden",
+        background: "#F2EBE0",
+      }}
+    >
       <div style={{
         position: "absolute", inset: 0,
         background: `
@@ -22,23 +27,46 @@ export default function SocialProof() {
       }} />
 
       <div style={{ maxWidth: 1000, margin: "0 auto", position: "relative", zIndex: 2, textAlign: "center" }}>
-        <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Prova Social</span>
+        <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>Resultados</span>
 
         <h2
           className="font-display reveal"
-          style={{ fontSize: "clamp(1.75rem, 4vw, 2.6rem)", fontWeight: 700, color: "var(--ink)", lineHeight: 1.25, marginBottom: "1.25rem" }}
+          style={{
+            fontSize: "clamp(1.75rem, 4vw, 2.6rem)",
+            fontWeight: 700,
+            color: "var(--ink)",
+            lineHeight: 1.25,
+            marginBottom: "1.25rem",
+          }}
         >
-          91% percebem mudanças concretas{" "}
-          <span style={{ color: "var(--gold)" }}>na primeira semana</span>
+          Pessoas começam a perceber mudanças{" "}
+          <span style={{ color: "var(--gold)" }}>já na primeira semana</span>
         </h2>
 
-        <p
-          className="font-display reveal"
-          style={{ fontSize: "clamp(1rem, 1.8vw, 1.125rem)", color: "var(--ink-dim)", lineHeight: 1.72, marginBottom: "2rem", maxWidth: 560, margin: "0 auto 2rem", fontWeight: 500 }}
+        <div
+          className="reveal"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: "clamp(1.5rem, 4vw, 3.5rem)",
+            flexWrap: "wrap",
+            margin: "0 auto 2.5rem",
+            maxWidth: 560,
+          }}
         >
-          Você escolhe o que quer manifestar. Treina o estado de quem já vive isso. E começa a notar mudanças reais em como se sente, reage e no que atrai.
-        </p>
+          {[
+            "mais clareza mental",
+            "menos repetição de padrões",
+            "mais controle emocional",
+          ].map((item) => (
+            <div key={item} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span style={{ color: "var(--gold)", fontSize: 12 }}>→</span>
+              <p style={{ fontSize: "0.9375rem", color: "var(--ink-dim)", fontFamily: "var(--font-body)", fontWeight: 500 }}>{item}</p>
+            </div>
+          ))}
+        </div>
 
+        {/* Testimonial card */}
         <div className="reveal" style={{
           background: "rgba(255,252,248,0.80)",
           border: "1px solid rgba(28,20,40,0.09)",
@@ -55,9 +83,12 @@ export default function SocialProof() {
           <p className="font-display" style={{ fontSize: "clamp(1.0625rem, 2vw, 1.1875rem)", color: "var(--ink)", lineHeight: 1.65, fontStyle: "italic", marginBottom: "0.75rem" }}>
             "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora."
           </p>
-          <p className="font-mono" style={{ fontSize: "0.6875rem", color: "var(--ink-dim)", letterSpacing: "0.10em" }}>Ana M., 34 anos</p>
+          <p className="font-mono" style={{ fontSize: "0.6875rem", color: "var(--ink-dim)", letterSpacing: "0.10em" }}>
+            Ana M., 34 anos
+          </p>
         </div>
 
+        {/* Feature badges */}
         <div className="badge-grid reveal" data-stagger>
           {badges.map((b) => (
             <div
@@ -84,9 +115,7 @@ export default function SocialProof() {
               }}
             >
               <div className="font-display gold-text" style={{ fontSize: "2.25rem", fontWeight: 700, lineHeight: 1, marginBottom: "0.625rem" }}>
-                {b.isNum && b.value !== null
-                  ? <CountUp to={b.value} suffix={b.suffix} duration={1400} />
-                  : b.display}
+                {b.display}
               </div>
               <span className="font-mono" style={{ fontSize: "0.6875rem", color: "var(--ink-dim)", letterSpacing: "0.14em", textTransform: "uppercase", display: "block", marginBottom: "0.2rem" }}>
                 {b.label}
