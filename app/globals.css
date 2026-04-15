@@ -444,3 +444,28 @@ section p:not(.font-mono) {
   /* mobile problem bullet override */
   .problem-bullet-text { font-size: 1rem !important; }
 }
+
+/* ── Checkout button — full width on mobile ── */
+@media (max-width: 640px) {
+  .checkout-btn {
+    width: 100% !important;
+    max-width: min(480px, 100%) !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 0.9375rem !important;
+    white-space: normal !important;
+    text-align: center;
+    justify-content: center !important;
+  }
+  /* Nav button stays compact regardless */
+  .site-nav .checkout-btn {
+    width: auto !important;
+    max-width: none !important;
+    padding: 0.55rem 1.2rem !important;
+    font-size: 0.8125rem !important;
+    white-space: nowrap !important;
+  }
+  /* Solution section summary pricing row: tighten gap */
+  .solution-pricing {
+    gap: 1.25rem !important;
+  }
+}

@@ -129,7 +129,7 @@ export default function Solution() {
             <span style={{ color: "var(--gold)" }}>O suficiente para começar a mudar como você se sente todos os dias.</span>
           </p>
 
-          <div style={{ display: "flex", justifyContent: "center", gap: "clamp(1.5rem, 4vw, 3rem)", flexWrap: "wrap", marginBottom: "2rem" }}>
+          <div className="solution-pricing" style={{ display: "flex", justifyContent: "center", gap: "clamp(1.5rem, 4vw, 3rem)", flexWrap: "wrap", marginBottom: "2rem" }}>
             {[
               { v: "R$ 37", l: "pagamento único" },
               { v: "Vitalício", l: "acesso permanente" },
