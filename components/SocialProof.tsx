@@ -3,19 +3,19 @@
 const testimonials = [
   {
     stars: 5,
-    text: "Na terceira sessão já sentia que estava criando outra versão de mim, e as situações começaram a mudar do lado de fora.",
+    text: "Eu chorava escondida no trabalho toda semana. Depois de 5 dias fazendo as sessões, parei de reagir às críticas do meu chefe. Saí do trabalho sem carregar aquilo pra casa pela primeira vez em anos.",
     name: "Ana M.",
     age: "34 anos",
   },
   {
     stars: 5,
-    text: "Nunca meditei na vida. Mas as sessões são tão guiadas que é impossível errar. Na primeira semana senti uma clareza que não tinha faz anos.",
+    text: "Estava há 8 meses travado pra abrir meu negócio. Fiz as 5 sessões em uma semana. No oitavo dia, enviei a proposta que tinha medo de mandar há meses. Fechei o contrato.",
     name: "Carlos R.",
     age: "41 anos",
   },
   {
     stars: 5,
-    text: "Comecei achando que era mais um produto de autoajuda. Depois da sessão 3, parei de reagir do mesmo jeito às coisas que me travavam há anos.",
+    text: "Achei que era mais um áudio de meditação. Na sessão 3, meu corpo relaxou de um jeito que não acontecia há anos. Parei de tomar remédio pra dormir depois de 2 semanas.",
     name: "Juliana P.",
     age: "28 anos",
   },

@@ -89,7 +89,7 @@ export default function Hero() {
             maxWidth: 470, marginBottom: "0.75rem",
             fontFamily: "var(--font-body)", fontWeight: 500,
           }}>
-            Descubra por que você fica preso nos mesmos padrões — e como 5 meditações guiadas de 5 a 7 minutos por dia treinam seu sistema nervoso a criar uma nova realidade.
+            Em 5 dias de prática — 5 a 7 minutos por dia — seu sistema nervoso aprende a responder ao futuro que você quer criar, em vez de repetir o passado que você quer deixar.
           </p>
 
           <p style={{
@@ -183,10 +183,10 @@ export default function Hero() {
               {[1,2,3,4,5].map((i) => <span key={i} style={{ color: "#C4983C", fontSize: 11 }}>★</span>)}
             </div>
             <p className="font-display" style={{ fontSize: 13.5, color: "rgba(235,229,218,0.90)", lineHeight: 1.65, fontStyle: "italic" }}>
-              "Na terceira sessão já sentia que estava criando outra versão de mim."
+              "Fechei o contrato que travei por 8 meses. No oitavo dia de prática."
             </p>
             <p className="font-mono" style={{ fontSize: 9.5, color: "rgba(192,180,224,0.72)", marginTop: 8, letterSpacing: "0.06em" }}>
-              Ana M., 34 anos
+              Carlos R., 41 anos
             </p>
           </div>
 

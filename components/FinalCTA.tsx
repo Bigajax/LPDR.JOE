@@ -25,9 +25,12 @@ export default function FinalCTA() {
         <div className="card-night reveal finalcta-card" style={{ marginBottom: "5rem", textAlign: "left" }}>
           <span className="section-label" style={{ marginBottom: "1.75rem" }}>A decisão mais simples que você pode tomar hoje</span>
 
-          <h2 className="font-display" style={{ fontSize: "clamp(1.625rem, 4vw, 2.375rem)", fontWeight: 700, color: "rgba(235,229,218,0.92)", lineHeight: 1.25, marginBottom: "1.5rem" }}>
+          <h2 className="font-display" style={{ fontSize: "clamp(1.625rem, 4vw, 2.375rem)", fontWeight: 700, color: "rgba(235,229,218,0.92)", lineHeight: 1.25, marginBottom: "0.75rem" }}>
             Por R$ 37, você tem acesso a tudo isso agora.
           </h2>
+          <p className="font-mono" style={{ fontSize: "0.625rem", color: "rgba(196,152,60,0.70)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "1.5rem" }}>
+            ◆ Preço de lançamento — pode aumentar sem aviso
+          </p>
 
           {/* Price comparison */}
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.75rem", marginBottom: "2rem" }} className="price-compare">
@@ -97,6 +100,20 @@ export default function FinalCTA() {
               subLabel="Acesso imediato · Sem assinatura · Vitalício"
             />
           </div>
+
+          {/* Guarantee */}
+          <div style={{
+            display: "flex", alignItems: "flex-start", gap: "0.875rem",
+            marginTop: "1.5rem", padding: "1rem 1.25rem",
+            background: "rgba(74,156,110,0.06)", border: "1px solid rgba(74,156,110,0.18)",
+            borderRadius: 10,
+          }}>
+            <span style={{ fontSize: 18, flexShrink: 0, marginTop: 1 }}>🛡</span>
+            <p style={{ fontSize: "0.875rem", color: "rgba(210,205,230,0.75)", fontFamily: "var(--font-body)", lineHeight: 1.6 }}>
+              <strong style={{ color: "rgba(235,229,218,0.90)", fontWeight: 600 }}>Garantia de 7 dias.</strong>{" "}
+              Se você fizer as sessões e não sentir nenhuma diferença, devolvemos 100% do valor. Sem perguntas, sem burocracia.
+            </p>
+          </div>
         </div>
 
         {/* Final headline */}
@@ -129,6 +146,13 @@ export default function FinalCTA() {
             subLabel="Acesso imediato após a compra"
             style={{ fontSize: "1rem", padding: "1.1rem 2.75rem" }}
           />
+
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", marginTop: "1.25rem" }}>
+            <span style={{ fontSize: 14, color: "rgba(74,156,110,0.75)" }}>🛡</span>
+            <p className="font-mono" style={{ fontSize: "0.625rem", color: "rgba(192,180,224,0.45)", letterSpacing: "0.12em" }}>
+              Garantia de 7 dias · Devolução total sem perguntas
+            </p>
+          </div>
         </div>
       </div>
 

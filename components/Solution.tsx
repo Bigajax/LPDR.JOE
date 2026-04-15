@@ -5,42 +5,42 @@ const sessions = [
   {
     tag:      "Etapa inicial · 3 min",
     title:    "Criando Seu Novo Potencial",
-    desc:     "Defina o que você quer criar e conecte-se com a emoção desse futuro. Você sai com uma intenção clara antes de meditar.",
+    desc:     "Antes de meditar, você define em palavras suas o que quer mudar — e como se sentiria se isso já fosse real. Sai com uma intenção clara, não com uma ideia vaga.",
     color:    "rgba(148,136,196,0.70)",
     dotColor: "var(--lavender)",
   },
   {
     tag:      "Dia 1 · 5 min",
     title:    "Sintonize Novos Potenciais",
-    desc:     "Acesse o campo de possibilidades além do seu passado e comece a viver a partir do futuro.",
+    desc:     "Seu cérebro está acostumado a buscar o que já conhece. Esta sessão treina ele a perceber possibilidades que o passado bloqueava — como sintonizar uma frequência nova.",
     color:    "rgba(196,152,60,0.70)",
     dotColor: "var(--gold)",
   },
   {
     tag:      "Dia 2 · 7 min",
     title:    "Bênção dos Centros de Energia",
-    desc:     "Ative seu corpo para um novo estado interno. Sua biologia muda quando seu foco muda.",
+    desc:     "A mudança não acontece só na cabeça — acontece no corpo. Aqui você aprende a ativar, intencionalmente, um estado físico diferente. O corpo para de sabotar o que a mente quer.",
     color:    "rgba(196,152,60,0.70)",
     dotColor: "var(--gold)",
   },
   {
     tag:      "Dia 3 · 7 min",
     title:    "Recondicione Seu Corpo e Mente",
-    desc:     "O que você repete, vira padrão. Esta sessão interrompe o ciclo antigo e instala um novo.",
+    desc:     "Você identifica o padrão que está preso no seu sistema nervoso e instala um novo estado no lugar. Não é visualização positiva — é reprogramação real do que seu corpo repete no automático.",
     color:    "rgba(196,152,60,0.70)",
     dotColor: "var(--gold)",
   },
   {
     tag:      "Dia 4 · 5 min",
     title:    "Meditação Caminhando",
-    desc:     "Para quando sentar não for suficiente. Leve a prática para o movimento — onde a vida acontece.",
+    desc:     "Para os dias em que você não consegue sentar quieto. Você leva o novo estado emocional para o movimento — e treina seu sistema nervoso mesmo em meio à rotina.",
     color:    "rgba(196,152,60,0.70)",
     dotColor: "var(--gold)",
   },
   {
     tag:      "Dia 5 · Sessão especial",
     title:    "Espaço-Tempo, Tempo-Espaço",
-    desc:     "A sessão mais profunda da jornada. Reserve um momento só seu. Aqui, você acessa o campo onde sua nova realidade já existe.",
+    desc:     "A sessão mais profunda do protocolo. Reserve 5 minutos só seus. É aqui que o trabalho das 4 sessões anteriores se consolida — e você sente, no corpo, que algo mudou.",
     color:    "rgba(148,136,196,0.70)",
     dotColor: "var(--lavender)",
   },
@@ -148,7 +148,17 @@ export default function Solution() {
             style={{ fontSize: "1rem" }}
           />
 
-          <p style={{ fontSize: "0.8125rem", color: "var(--ink-dim)", lineHeight: 1.6, marginTop: "1.25rem", fontFamily: "var(--font-body)" }}>
+          <div style={{
+            display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem",
+            marginTop: "1rem",
+          }}>
+            <span style={{ fontSize: 13, color: "rgba(74,156,110,0.75)" }}>🛡</span>
+            <p className="font-mono" style={{ fontSize: "0.625rem", color: "var(--ink-muted)", letterSpacing: "0.10em" }}>
+              Garantia de 7 dias · Devolução total sem perguntas
+            </p>
+          </div>
+
+          <p style={{ fontSize: "0.8125rem", color: "var(--ink-dim)", lineHeight: 1.6, marginTop: "0.875rem", fontFamily: "var(--font-body)" }}>
             Menos que um almoço fora. Mas o resultado você carrega pra sempre.
           </p>
         </div>
