@@ -1,30 +1,48 @@
 "use client";
 import CheckoutButton from "./CheckoutButton";
 
-const steps = [
+const sessions = [
   {
-    number: "1",
-    label: "Potencial",
-    title: "Criar seu novo potencial",
-    text: "Defina com clareza quem você está se tornando — não apenas o que quer, mas o estado de quem já vive isso.",
+    tag:      "Etapa inicial · 3 min",
+    title:    "Criando Seu Novo Potencial",
+    desc:     "Defina o que você quer criar e conecte-se com a emoção desse futuro. Você sai com uma intenção clara antes de meditar.",
+    color:    "rgba(148,136,196,0.70)",
+    dotColor: "var(--lavender)",
   },
   {
-    number: "2",
-    label: "Sintonia",
-    title: "Sintonizar novos estados",
-    text: "Aprenda a gerar intencionalmente o estado emocional de quem já alcançou o que você busca.",
+    tag:      "Dia 1 · 5 min",
+    title:    "Sintonize Novos Potenciais",
+    desc:     "Acesse o campo de possibilidades além do seu passado e comece a viver a partir do futuro.",
+    color:    "rgba(196,152,60,0.70)",
+    dotColor: "var(--gold)",
   },
   {
-    number: "3",
-    label: "Recondicionamento",
-    title: "Recondicionar mente e corpo",
-    text: "Treine esse estado até que mente e corpo respondam em coerência. Isso é o que muda o padrão.",
+    tag:      "Dia 2 · 7 min",
+    title:    "Bênção dos Centros de Energia",
+    desc:     "Ative seu corpo para um novo estado interno. Sua biologia muda quando seu foco muda.",
+    color:    "rgba(196,152,60,0.70)",
+    dotColor: "var(--gold)",
   },
   {
-    number: "4",
-    label: "Aplicação",
-    title: "Aplicar isso na sua realidade",
-    text: "O protocolo não é teoria. É prática diária, guiada, de 7 minutos — até o novo estado se tornar o seu normal.",
+    tag:      "Dia 3 · 7 min",
+    title:    "Recondicione Seu Corpo e Mente",
+    desc:     "O que você repete, vira padrão. Esta sessão interrompe o ciclo antigo e instala um novo.",
+    color:    "rgba(196,152,60,0.70)",
+    dotColor: "var(--gold)",
+  },
+  {
+    tag:      "Dia 4 · 5 min",
+    title:    "Meditação Caminhando",
+    desc:     "Para quando sentar não for suficiente. Leve a prática para o movimento — onde a vida acontece.",
+    color:    "rgba(196,152,60,0.70)",
+    dotColor: "var(--gold)",
+  },
+  {
+    tag:      "Dia 5 · Sessão especial",
+    title:    "Espaço-Tempo, Tempo-Espaço",
+    desc:     "A sessão mais profunda da jornada. Reserve um momento só seu. Aqui, você acessa o campo onde sua nova realidade já existe.",
+    color:    "rgba(148,136,196,0.70)",
+    dotColor: "var(--lavender)",
   },
 ];
 
@@ -33,153 +51,110 @@ export default function Solution() {
     <section
       style={{
         padding: "clamp(4.75rem, 8vw, 7rem) clamp(1.25rem, 4vw, 2rem) clamp(4rem, 7vw, 6rem)",
-        position: "relative",
-        overflow: "hidden",
-        background: "#F2EBE0",
+        position: "relative", overflow: "hidden", background: "#F2EBE0",
       }}
     >
-      <div style={{
-        position: "absolute", inset: 0, pointerEvents: "none",
-        background: `
-          radial-gradient(ellipse 70% 50% at 80% 10%, rgba(196,152,60,0.05) 0%, transparent 55%),
-          radial-gradient(ellipse 50% 60% at 10% 90%, rgba(196,152,60,0.06) 0%, transparent 50%)
-        `,
-      }} />
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "radial-gradient(ellipse 70% 50% at 80% 10%, rgba(196,152,60,0.05) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 10% 90%, rgba(196,152,60,0.06) 0%, transparent 50%)" }} />
 
       <div style={{ maxWidth: 1060, margin: "0 auto", position: "relative", zIndex: 2 }}>
 
-        {/* Solution block header */}
-        <div style={{ textAlign: "center", marginBottom: "clamp(1.5rem, 4vw, 2.5rem)" }}>
-          <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>O Protocolo</span>
-          <h2
-            className="font-display reveal"
-            style={{
-              fontSize: "clamp(1.75rem, 4.5vw, 2.6rem)",
-              fontWeight: 600,
-              color: "var(--ink)",
-              lineHeight: 1.35,
-              maxWidth: 640,
-              margin: "0 auto 1.25rem",
-            }}
-          >
-            Esse protocolo foi criado para isso.
+        {/* Header */}
+        <div style={{ textAlign: "center", marginBottom: "clamp(3rem, 6vw, 5rem)" }}>
+          <span className="section-label-ink reveal" style={{ marginBottom: "1.25rem" }}>O que você está comprando</span>
+          <h2 className="font-display reveal" style={{
+            fontSize: "clamp(1.75rem, 4.5vw, 2.6rem)", fontWeight: 600,
+            color: "var(--ink)", lineHeight: 1.3, maxWidth: 700, margin: "0 auto 1.25rem",
+          }}>
+            6 sessões guiadas para reprogramar
+            <br />como seu corpo responde à vida.
           </h2>
-          <div
-            className="reveal"
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "clamp(1.5rem, 4vw, 3rem)",
-              flexWrap: "wrap",
-              marginBottom: "3rem",
-            }}
-          >
-            {[
-              "Reprogramar seu estado interno",
-              "Romper padrões automáticos",
-              "Criar uma nova identidade emocional",
-            ].map((item) => (
-              <div key={item} style={{ display: "flex", alignItems: "center", gap: "0.625rem" }}>
-                <span style={{ color: "var(--gold)", fontSize: 14 }}>✦</span>
-                <p style={{ fontSize: "0.9375rem", color: "var(--ink-dim)", fontFamily: "var(--font-body)", fontWeight: 500 }}>{item}</p>
-              </div>
-            ))}
-          </div>
-          <p
-            className="font-mono reveal"
-            style={{
-              fontSize: "clamp(0.75rem, 1.4vw, 0.875rem)",
-              color: "var(--gold)",
-              letterSpacing: "0.14em",
-              textTransform: "uppercase",
-              marginBottom: "2.5rem",
-            }}
-          >
-            Sem teoria excessiva. Apenas prática guiada.
+          <p className="reveal" style={{
+            fontSize: "clamp(1rem, 2vw, 1.125rem)", color: "var(--ink-dim)", lineHeight: 1.72,
+            maxWidth: 520, margin: "0 auto 0",
+            fontFamily: "var(--font-body)", fontWeight: 500,
+          }}>
+            Cada sessão tem um propósito específico. Juntas, treinam seu sistema nervoso a viver no futuro antes de ele acontecer.
           </p>
         </div>
 
-        {/* How It Works — 4 steps */}
-        <div style={{ textAlign: "center", marginBottom: "clamp(2rem, 4vw, 3rem)" }}>
-          <span className="section-label-ink reveal" style={{ marginBottom: "1rem" }}>Como Funciona</span>
-          <h3
-            className="font-display reveal"
-            style={{
-              fontSize: "clamp(1.375rem, 3vw, 1.875rem)",
-              fontWeight: 600,
-              color: "var(--ink)",
-              lineHeight: 1.35,
-              maxWidth: 560,
-              margin: "0 auto 2.5rem",
-            }}
-          >
-            Um processo simples e progressivo
-          </h3>
-        </div>
-
-        <div className="steps-grid" style={{ marginBottom: "clamp(2.5rem, 6vw, 4rem)", position: "relative" }} data-stagger>
-          {steps.map((step) => (
+        {/* Session list */}
+        <div className="reveal" style={{ display: "flex", flexDirection: "column", gap: "0", marginBottom: "clamp(2.5rem, 5vw, 4rem)" }}>
+          {sessions.map((s, idx) => (
             <div
-              key={step.number}
-              className="reveal"
+              key={s.title}
               style={{
-                background: "rgba(248,242,234,0.85)",
+                display: "flex", alignItems: "flex-start", gap: "1.5rem",
+                padding: "1.5rem 1.75rem",
+                background: idx % 2 === 0 ? "rgba(255,252,248,0.90)" : "rgba(248,242,232,0.70)",
                 border: "1px solid rgba(28,20,40,0.07)",
-                borderRadius: 16,
-                padding: "2rem",
-                boxShadow: "0 2px 12px rgba(28,20,40,0.06)",
-                position: "relative",
-                overflow: "hidden",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-              }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 10px 28px rgba(28,20,40,0.10)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-                (e.currentTarget as HTMLElement).style.boxShadow = "0 2px 12px rgba(28,20,40,0.06)";
+                borderTop: idx === 0 ? "1px solid rgba(28,20,40,0.07)" : "none",
+                borderRadius: idx === 0 ? "12px 12px 0 0" : idx === sessions.length - 1 ? "0 0 12px 12px" : "0",
               }}
             >
-              <div className="font-display" style={{ fontSize: "5rem", fontWeight: 700, color: "rgba(28,20,40,0.05)", lineHeight: 1, marginBottom: "-0.75rem", letterSpacing: "-0.04em", userSelect: "none" }}>
-                {step.number}
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 6, flexShrink: 0, paddingTop: 4 }}>
+                <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.5625rem", color: "rgba(28,20,40,0.30)", letterSpacing: "0.08em" }}>
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                {idx < sessions.length - 1 && (
+                  <div style={{ width: 1, flex: 1, minHeight: 20, background: "rgba(28,20,40,0.10)" }} />
+                )}
               </div>
-              <p className="font-mono" style={{ fontSize: "0.6875rem", color: "rgba(196,152,60,0.78)", textTransform: "uppercase", letterSpacing: "0.15em", marginBottom: "0.75rem" }}>
-                {step.label}
-              </p>
-              <h3 className="font-display" style={{ fontSize: "clamp(1.2rem, 2.5vw, 1.4rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.3, marginBottom: "0.75rem" }}>
-                {step.title}
-              </h3>
-              <p style={{ fontSize: "1rem", color: "var(--ink-dim)", lineHeight: 1.72, fontFamily: "var(--font-body)", fontWeight: 500 }}>
-                {step.text}
-              </p>
+              <div style={{ flex: 1 }}>
+                <p className="font-mono" style={{ fontSize: "0.6563rem", color: s.color, textTransform: "uppercase", letterSpacing: "0.14em", marginBottom: "0.4rem" }}>
+                  {s.tag}
+                </p>
+                <h3 className="font-display" style={{ fontSize: "clamp(1.125rem, 2.5vw, 1.3rem)", fontWeight: 600, color: "var(--ink)", lineHeight: 1.25, marginBottom: "0.5rem" }}>
+                  {s.title}
+                </h3>
+                <p style={{ fontSize: "0.9375rem", color: "var(--ink-dim)", lineHeight: 1.65, fontFamily: "var(--font-body)", fontWeight: 400 }}>
+                  {s.desc}
+                </p>
+              </div>
             </div>
           ))}
         </div>
 
-        <div style={{ textAlign: "center" }}>
+        {/* Summary + CTA */}
+        <div className="reveal" style={{
+          background: "rgba(255,252,248,0.90)", border: "1px solid rgba(28,20,40,0.08)",
+          borderRadius: 16, padding: "clamp(1.75rem, 4vw, 2.5rem)",
+          boxShadow: "0 2px 16px rgba(28,20,40,0.06)", textAlign: "center",
+        }}>
+          <p className="font-display" style={{
+            fontSize: "clamp(1.125rem, 2.5vw, 1.375rem)", fontWeight: 600,
+            color: "var(--ink)", lineHeight: 1.4, marginBottom: "1.25rem",
+          }}>
+            Total: menos de 40 minutos de prática.
+            <br />
+            <span style={{ color: "var(--gold)" }}>O suficiente para começar a mudar como você se sente todos os dias.</span>
+          </p>
+
+          <div style={{ display: "flex", justifyContent: "center", gap: "clamp(1.5rem, 4vw, 3rem)", flexWrap: "wrap", marginBottom: "2rem" }}>
+            {[
+              { v: "R$ 37", l: "pagamento único" },
+              { v: "Vitalício", l: "acesso permanente" },
+              { v: "Imediato", l: "acesso após compra" },
+            ].map(({ v, l }) => (
+              <div key={v} style={{ textAlign: "center" }}>
+                <p className="font-display gold-text" style={{ fontSize: "1.5rem", fontWeight: 700, lineHeight: 1 }}>{v}</p>
+                <p className="font-mono" style={{ fontSize: "0.625rem", color: "var(--ink-dim)", letterSpacing: "0.12em", textTransform: "uppercase", marginTop: 4 }}>{l}</p>
+              </div>
+            ))}
+          </div>
+
           <CheckoutButton
-            label="Começar agora"
-            subLabel="Leva menos de 3 minutos para iniciar"
+            label="Criar minha nova realidade — R$ 37"
+            subLabel="Acesso imediato · Sem assinatura"
             variant="light"
             style={{ fontSize: "1rem" }}
           />
-        </div>
-      </div>
 
-      <style>{`
-        .steps-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 1.25rem;
-        }
-        @media (max-width: 900px) {
-          .steps-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 560px) {
-          .steps-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
+          <p style={{ fontSize: "0.8125rem", color: "var(--ink-dim)", lineHeight: 1.6, marginTop: "1.25rem", fontFamily: "var(--font-body)" }}>
+            Menos que um almoço fora. Mas o resultado você carrega pra sempre.
+          </p>
+        </div>
+
+      </div>
     </section>
   );
 }
